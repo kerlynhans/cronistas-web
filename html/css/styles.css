@@ -10475,6 +10475,7 @@ input[type="number"] {
     bottom: 0;
     width: 100%;
 }
+
 .card__post .card__post__body .card__post__content .card__post__category {
     clear: both;
     color: #fff;
@@ -10482,8 +10483,8 @@ input[type="number"] {
     font-size: 10px;
     margin-bottom: 5px;
     padding: 5px 8px;
-    background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
-    background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+    background: -ms-linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
+    background: linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
     line-height: 15px;
     text-transform: uppercase;
     font-family: Montserrat, sans-serif;
@@ -10727,6 +10728,7 @@ input[type="number"] {
     border: 1px solid #e9ecef;
     margin-top: -1px;
 }
+
 .card__post__body-border-all .card__post__category {
     clear: both;
     color: #fff;
@@ -10734,8 +10736,8 @@ input[type="number"] {
     font-size: 10px;
     margin-bottom: 5px;
     padding: 5px 8px;
-    background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
-    background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+    background: -ms-linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
+    background: linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
     line-height: 15px;
     text-transform: uppercase;
     font-family: Montserrat, sans-serif;
@@ -11098,6 +11100,7 @@ input[type="number"] {
         padding: 0;
     }
 }
+
 .article__entry .article__content .article__category {
     clear: both;
     color: #fff;
@@ -11105,8 +11108,8 @@ input[type="number"] {
     font-size: 10px;
     margin-bottom: 5px;
     padding: 5px 8px;
-    background: -ms-linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
-    background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
+    background: -ms-linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
+    background: linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
     line-height: 15px;
     text-transform: uppercase;
     font-family: Montserrat, sans-serif;
@@ -11771,7 +11774,7 @@ input[type="number"] {
     left: 0;
     width: 50px;
     height: 5px;
-    background: #ED2090;
+    background: #ee499a;
     z-index: 1;
 }
 .wrapper__list__article .border_section:after {
@@ -12669,8 +12672,8 @@ input[type="number"] {
 .trending-news .trending-news-inner .title {
     float: left;
     padding: 10px 15px;
-    background: -ms-linear-gradient(285deg, #F176AE 27%, #ED2090 100%, #fff 100%);
-    background: linear-gradient(285deg, #F176AE 27%, #ED2090 100%, #fff 100%);
+    background: -ms-linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
+    background: linear-gradient(285deg, #E86DB0 27%, #ee499a 100%, #fff 100%);
     color: #fff;
     text-transform: uppercase;
     font-size: 12px;
@@ -13984,7 +13987,7 @@ body.offcanvas-active {
     background-color: #fff;
     box-shadow: 0 2px 3px rgba(100, 100, 100, 0.1);
     font-size: 14px;
-    border-bottom: 5px solid #ED2090;
+    border-bottom: 5px solid #ee499a;
 }
 .navbar-soft .navbar-toggler {
     color: rgba(0, 0, 0, 0.5);
