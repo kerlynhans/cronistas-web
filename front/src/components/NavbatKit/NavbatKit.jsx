@@ -8,7 +8,6 @@ const NavbatKit = () => {
   const [showMMenu, setShowMMenu] = useState(false);
 
   const mobileShowHandler = () => {
-    console.log("STATUS", showMMenu);
     setShowMMenu(true);
   };
   const mobileHideHandler = () => setShowMMenu(false);

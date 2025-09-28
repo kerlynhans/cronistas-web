@@ -253,18 +253,11 @@ const MenuMobile = ({ menuShow, menuHide }) => {
 
       <Modal.Footer>
         <p>
-          © 2020{" "}
-          <a
-            href="http://retenvi.com"
-            title="Premium WordPress news &amp; magazine theme"
-          >
-            Magzrenvi
-          </a>
-          - Premium template news, blog & magazine &amp; magazine theme by{" "}
-          <a href="http://retenvi.com" title="retenvi">
-            RETENVI.COM
-          </a>
-          .
+          © 2025{" "}
+          <a href="/" title="Página de inicio">
+            Cronistas
+          </a>{" "}
+          - su periódico. El informativo de interés regional.
         </p>
       </Modal.Footer>
     </Modal>

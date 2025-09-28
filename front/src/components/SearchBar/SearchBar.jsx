@@ -4,6 +4,8 @@ import SearchForm from "@/components/SearchForm/SearchForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faTimes } from "@fortawesome/free-solid-svg-icons";
 
+import styles from "./SearchBar.module.scss";
+
 const SearchBar = () => {
   const [showSearch, setShowSearch] = useState(false);
 
@@ -29,8 +31,11 @@ const SearchBar = () => {
 
       {/* Search content bar. */}
       <div
-        className="top-search navigation-shadow"
-        style={{ display: showSearch ? "block" : "none" }}
+        className={`${styles.topSearch} top-search navigation-shadow`}
+        style={{
+          maxHeight: showSearch ? "200px" : "0px",
+          padding: showSearch ? "10px 0" : "0px",
+        }}
       >
         <div className="container">
           <div className="input-group ">

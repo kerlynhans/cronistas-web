@@ -2,14 +2,13 @@ import { Poppins, Playfair, Montserrat } from "next/font/google";
 import Loading from "@/components/Loading/Loading";
 import NavbarTop from "@/components/NavbarTop/NavbarTop";
 import NavbarKit from "@/components/NavbatKit/NavbatKit";
+import Footer from "@/components/Footer/Footer";
 
-// font awesome styles
+//styles
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "slick-carousel/slick/slick.css";
 import "@/styles/main.scss";
-
-// font awesome styles
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const poppinsSans = Poppins({
   variable: "--bs-body-font-family",
@@ -49,6 +48,12 @@ export default function RootLayout({ children }) {
           <NavbarKit />
         </header>
         {children}
+
+        <section className="wrapper__section p-0">
+          <div className="wrapper__section__components">
+            <Footer />
+          </div>
+        </section>
       </body>
     </html>
   );

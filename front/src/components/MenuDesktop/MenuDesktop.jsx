@@ -1,8 +1,6 @@
-import React from "react";
-
-import CardArticle12 from "@/components/CardArticle/CardArticle12";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import MainLogo from "@/components/Logo/MainLogo";
+import PopularNews from "@/components/PopularNews/PopularNews";
 
 import styles from "./MenuDesktop.module.scss";
 
@@ -20,7 +18,7 @@ const MenuDesktop = ({ menuShow }) => {
             </button>
           </div>
 
-          <MainLogo width={200} />
+          <MainLogo width={200} className="mb-0 mx-auto" hasLink={true} />
 
           <div
             className="collapse navbar-collapse justify-content-between"
@@ -29,47 +27,53 @@ const MenuDesktop = ({ menuShow }) => {
             <ul className="navbar-nav ms-auto ">
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link active dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="#"
                   data-toggle="dropdown"
                 >
-                  Home
+                  Secciones
                 </a>
-                <ul className="dropdown-menu dropdown-menu-left">
+                <ul className="dropdown-menu animate fade-up">
                   <li>
                     <a className="dropdown-item" href="/homepage-v1.html">
-                      Home version one
+                      Diálogos sobre discapacidad
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="homepage-v2.html">
-                      Home version two
+                      El zaguán de las presencias
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="/homepage-v3.html">
-                      Home version three
+                      El Líbano y su historia
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="/homepage-v4.html">
-                      Home version four
+                      Homenaje póstumo
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/homepage-v3.html">
+                      Tejiendo sentidos
                     </a>
                   </li>
                 </ul>
               </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
                   data-toggle="dropdown"
                 >
-                  Pages
+                  Categorías
                 </a>
                 <ul className="dropdown-menu animate fade-up">
                   <li>
                     <a className="dropdown-item icon-arrow" href="#">
-                      Blog
+                      Política
                     </a>
                     <ul className="submenu dropdown-menu  animate fade-up">
                       <li>
@@ -128,7 +132,7 @@ const MenuDesktop = ({ menuShow }) => {
                   </li>
                   <li>
                     <a className="dropdown-item icon-arrow" href="#">
-                      Blog single detail
+                      Educación
                     </a>
                     <ul className="submenu dropdown-menu  animate fade-up">
                       <li>
@@ -157,10 +161,9 @@ const MenuDesktop = ({ menuShow }) => {
                       </li>
                     </ul>
                   </li>
-
                   <li>
                     <a className="dropdown-item icon-arrow" href="#">
-                      Search Result
+                      Salud
                     </a>
                     <ul className="submenu dropdown-menu  animate fade-up">
                       <li>
@@ -180,44 +183,12 @@ const MenuDesktop = ({ menuShow }) => {
                   </li>
                   <li>
                     <a className="dropdown-item" href="/login.html">
-                      Login
+                      Deportes
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="/register.html">
-                      Register
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/contact.html">
-                      Contact
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/404.html">
-                      404 Error
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link active dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                >
-                  About
-                </a>
-                <ul className="dropdown-menu dropdown-menu-left">
-                  <li>
-                    <a className="dropdown-item" href="/about-us.html">
-                      Style 1
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/about-us-v1.html">
-                      Style 2
+                      Cultura
                     </a>
                   </li>
                 </ul>
@@ -229,7 +200,7 @@ const MenuDesktop = ({ menuShow }) => {
                   href="#"
                   data-toggle="dropdown"
                 >
-                  News
+                  Especiales
                 </a>
                 <div
                   className="dropdown-menu animate fade-down megamenu mx-auto"
@@ -239,40 +210,23 @@ const MenuDesktop = ({ menuShow }) => {
                     <div className="col-megamenu">
                       <h5 className="title">Recent news</h5>
                       <hr />
-                      {/* <!-- Popular news carousel --> */}
-                      <div className="popular__news-header-carousel">
-                        <div className="top__news__slider">
-                          <div className="item">
-                            <CardArticle12 />
-                          </div>
-                          <div className="item">
-                            <CardArticle12 />
-                          </div>
-                          <div className="item">
-                            <CardArticle12 />
-                          </div>
-                          <div className="item">
-                            <CardArticle12 />
-                          </div>
-                          <div className="item">
-                            <CardArticle12 />
-                          </div>
-                        </div>
-                      </div>
+
+                      {/* Popular news carousel */}
+                      <PopularNews />
                     </div>
-                    {/* <!-- col-megamenu.// --> */}
                   </div>
                 </div>
-                {/* <!-- dropdown-mega-menu.// --> */}
               </li>
+
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Category
+                  Temas
                 </a>
               </li>
+
               <li className="nav-item">
                 <a className="nav-link" href="/contact.html">
-                  contact
+                  Contacto
                 </a>
               </li>
             </ul>
