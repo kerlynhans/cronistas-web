@@ -1,7 +1,11 @@
+import MainNews from "@/components/MainNews/MainNews";
+import TrendingNews from "@/components/TrendingNews/TrendingNews";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Index</h1>
-    </div>
+    <main>
+      <TrendingNews />
+      <MainNews />
+    </main>
   );
 }

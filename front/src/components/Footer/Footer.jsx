@@ -65,7 +65,6 @@ const Footer = () => {
                     <li className="list-inline-item">
                       <a href="#">fashion</a>
                     </li>
-
                     <li className="list-inline-item">
                       <a href="#">Food</a>
                     </li>
@@ -81,14 +80,12 @@ const Footer = () => {
                     <li className="list-inline-item">
                       <a href="#">Lifestyle</a>
                     </li>
-
                     <li className="list-inline-item">
                       <a href="#">Science</a>
                     </li>
                     <li className="list-inline-item">
                       <a href="#">Travel</a>
                     </li>
-
                     <li className="list-inline-item">
                       <a href="#">Startup</a>
                     </li>

@@ -2,7 +2,7 @@ import CardArticle12 from "@/components/CardArticle/CardArticle12";
 import Slider from "react-slick";
 
 const PopularNews = () => {
-  var settings = {
+  const settings = {
     slidesToShow: 4,
     slidesToScroll: 4,
     autoplay: true,
