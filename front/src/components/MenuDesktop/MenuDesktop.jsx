@@ -18,7 +18,7 @@ const MenuDesktop = ({ menuShow }) => {
             </button>
           </div>
 
-          <MainLogo width={200} className="mb-0 mx-auto" hasLink={true} />
+          <MainLogo width={300} className="mb-0 mx-auto" hasLink={true} />
 
           <div
             className="collapse navbar-collapse justify-content-between"

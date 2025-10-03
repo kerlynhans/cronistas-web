@@ -6,7 +6,7 @@ import CardArticle1 from "@/components/CardArticle/CardArticle1";
 import Slider from "react-slick";
 
 const MainNews = () => {
-  const settings2 = {
+  const settings = {
     slidesToShow: 4,
     slidesToScroll: 4,
     autoplay: true,
@@ -41,14 +41,6 @@ const MainNews = () => {
     ],
   };
 
-  const settings1 = {
-    slidesToShow: 1,
-    autoplay: true,
-    dots: false,
-    lazyLoad: "progressive",
-    arrows: false,
-  };
-
   return (
     <section>
       {/* Popular news  header */}
@@ -75,7 +67,7 @@ const MainNews = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <Slider className="top__news__slider" {...settings2}>
+              <Slider className="top__news__slider" {...settings}>
                 <div className="item">
                   <CardArticle12 />
                 </div>
