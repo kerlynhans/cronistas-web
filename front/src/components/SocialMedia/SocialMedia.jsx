@@ -8,7 +8,7 @@ import {
 const SocialMedia = () => {
   return (
     <aside className="wrapper__list__article">
-      <h4 className="border_section">stay conected</h4>
+      <h4 className="border_section">Redes sociales</h4>
       <div className="wrap__social__media">
         <a href="#" target="_blank">
           <div className="social__media__widget facebook">

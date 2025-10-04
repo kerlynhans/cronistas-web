@@ -5,7 +5,7 @@ const RecentPosts = () => {
   return (
     <div className="col-md-12 col-lg-8">
       <div className="wrapper__list__article">
-        <h4 className="border_section">recent post</h4>
+        <h4 className="border_section">Destacados</h4>
       </div>
       <div className="row ">
         <div className="col-sm-12 col-md-6 mb-4">

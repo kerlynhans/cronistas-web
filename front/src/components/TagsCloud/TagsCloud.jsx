@@ -3,7 +3,7 @@ import React from "react";
 const TagsCloud = () => {
   return (
     <aside className="wrapper__list__article">
-      <h4 className="border_section">tags</h4>
+      <h4 className="border_section">Etiquetas</h4>
       <div className="blog-tags p-0">
         <ul className="list-inline">
           <li className="list-inline-item">

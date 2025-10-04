@@ -1,67 +1,66 @@
 "use client";
 
 import CardArticle11 from "@/components/CardArticle/CardArticle11";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const ThemeNews = () => {
-  const settings = {
-    slidesToShow: 4,
-    autoplay: true,
-    dots: false,
-    lazyLoad: "progressive",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
           <aside className="wrapper__list__article">
-            <h4 className="border_section">technology</h4>
+            <h4 className="border_section">Nuestras crónicas</h4>
           </aside>
         </div>
         <div className="col-md-12">
-          <Slider className="article__entry-carousel" {...settings}>
-            <div className="item">
-              <CardArticle11 />
+          <div className="article__entry-carousel">
+            <Swiper
+              modules={[Autoplay, Navigation]}
+              navigation={{
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+              }}
+              onInit={(swiper) => {
+                // Ensure Swiper links to external buttons
+                swiper.params.navigation.prevEl = ".swiper-button-prev";
+                swiper.params.navigation.nextEl = ".swiper-button-next";
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
+              autoplay={{ delay: 3000 }}
+              spaceBetween={10}
+              slidesPerView={2}
+              loop={true}
+              breakpoints={{
+                400: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 27,
+                },
+              }}
+            >
+              {[...Array(5)].map((_, index) => (
+                <SwiperSlide key={index} className="item">
+                  <CardArticle11 />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="swiper-button-prev">
+              <FontAwesomeIcon icon={faAngleLeft} />
             </div>
-            <div className="item">
-              <CardArticle11 />
+            <div className="swiper-button-next">
+              <FontAwesomeIcon icon={faAngleRight} />
             </div>
-            <div className="item">
-              <CardArticle11 />
-            </div>
-            <div className="item">
-              <CardArticle11 />
-            </div>
-            <div className="item">
-              <CardArticle11 />
-            </div>
-          </Slider>
+          </div>
         </div>
       </div>
     </div>

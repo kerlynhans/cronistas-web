@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import MenuMobile from "@/components/MenuMobile/MenuMobile";
 import MenuDesktop from "@/components/MenuDesktop/MenuDesktop";
 
+import styles from "./NavbarKit.module.scss";
+
 const NavbatKit = () => {
   const [showMMenu, setShowMMenu] = useState(false);
 

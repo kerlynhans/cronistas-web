@@ -5,9 +5,11 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
+import styles from "./NavbarTop.module.scss";
+
 const NavbarTop = () => {
   return (
-    <div className="topbar d-none d-sm-block">
+    <div className={`${styles.navbarTop} topbar d-none d-sm-block`}>
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-5">
@@ -23,11 +25,13 @@ const NavbarTop = () => {
                     Contáctanos
                   </a>
                 </li>
-                <li>
+                
+                {/* <li>
                   <a href="#" title="Login o registro">
                     Login / Registro
                   </a>
-                </li>
+                </li> */}
+                
               </ul>
               <ul className="topbar-sosmed">
                 <li>

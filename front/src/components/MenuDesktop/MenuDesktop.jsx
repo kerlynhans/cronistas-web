@@ -6,7 +6,9 @@ import styles from "./MenuDesktop.module.scss";
 
 const MenuDesktop = ({ menuShow }) => {
   return (
-    <div className="navigation-wrap navigation-shadow bg-white">
+    <div
+      className={`${styles.menuDesktop} navigation-wrap navigation-shadow bg-white`}
+    >
       <nav className="navbar navbar-hover navbar-expand-lg navbar-soft">
         <div className="container">
           <div className="offcanvas-header">

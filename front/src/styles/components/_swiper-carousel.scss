@@ -1,0 +1,29 @@
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0 none;
+  margin-top: -22.5px;
+  text-align: center;
+  font: 20px/45px FontAwesome;
+  color: #fff;
+  z-index: 5;
+}
+
+.swiper-button-pre {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0 none;
+  margin-top: -22.5px;
+  text-align: center;
+  font: 20px/45px FontAwesome;
+  color: #fff;
+  z-index: 5;
+}

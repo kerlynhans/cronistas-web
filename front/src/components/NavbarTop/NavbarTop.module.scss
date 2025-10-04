@@ -1,0 +1,13 @@
+.navbarTop {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(53, 133, 76, 1) 15%,
+    rgba(53, 133, 76, 1) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  a:hover {
+    color: #000 !important;
+  }
+}
