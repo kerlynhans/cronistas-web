@@ -1,11 +1,32 @@
+import { useState, useEffect } from "react";
+import { Modal } from "react-bootstrap";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import SearchForm from "@/components/SearchForm/SearchForm";
-import { Modal, Button } from "react-bootstrap";
 
 const MenuMobile = ({ menuShow, menuHide }) => {
+  const [current, setCurrent] = useState("");
+  const pathname = usePathname();
+
+  useEffect(() => {
+    menuHide();
+  }, [pathname]);
+
+  const handleMenuHide = () => {
+    setCurrent("");
+    menuHide();
+  };
+
+  const handleSubMenu = (e, id) => {
+    e.preventDefault();
+    setCurrent(id === current ? "" : id);
+  };
+
   return (
     <Modal
       show={menuShow}
-      onHide={menuHide}
+      onHide={handleMenuHide}
       id="modal_aside_right"
       dialogClassName="modal-dialog-aside"
       className="fixed-left"
@@ -26,49 +47,73 @@ const MenuMobile = ({ menuShow, menuHide }) => {
       <Modal.Body>
         <nav className="list-group list-group-flush">
           <ul className="navbar-nav ">
+            <li className="nav-item">
+              <Link
+                className="nav-link text-dark"
+                href="/"
+                onClick={handleMenuHide}
+              >
+                <i className="fa fa-home"></i> Inicio
+              </Link>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link active dropdown-toggle text-dark"
                 href="#"
                 data-toggle="dropdown"
+                onClick={(e) => handleSubMenu(e, "sections")}
               >
-                Home
+                Secciones
               </a>
-              <ul className="dropdown-menu dropdown-menu-left">
+              <ul
+                className={`dropdown-menu dropdown-menu-left  ${
+                  current === "sections" && "d-block"
+                }`}
+              >
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item text-dark"
-                    href="/homepage-v1.html"
+                    href="/dialogos-sobre-discapacidad"
                   >
-                    Home version one
-                  </a>
+                    Diálogos sobre discapacidad
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item text-dark"
-                    href="homepage-v2.html"
+                    href="/el-zaguan-de-las-presencias"
                   >
-                    Home version two
-                  </a>
+                    El zaguán de las presencias
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item text-dark"
-                    href="/homepage-v3.html"
+                    href="/el-libano-y-su-historia"
                   >
-                    Home version three
-                  </a>
+                    El Líbano y su historia
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item text-dark"
-                    href="/homepage-v4.html"
+                    href="/homenaje-postumo"
                   >
-                    Home version four
-                  </a>
+                    Homenaje póstumo
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="dropdown-item text-dark"
+                    href="/tejiendo-sentidos"
+                  >
+                    Tejiendo sentidos
+                  </Link>
                 </li>
               </ul>
             </li>
+
+            {/* TODO: Multiple Submenus
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle  text-dark"
@@ -214,38 +259,62 @@ const MenuMobile = ({ menuShow, menuHide }) => {
                 </li>
               </ul>
             </li>
+            */}
 
             <li className="nav-item dropdown">
               <a
                 className="nav-link active dropdown-toggle  text-dark"
                 href="#"
                 data-toggle="dropdown"
+                onClick={(e) => handleSubMenu(e, "categories")}
               >
-                About
+                Categorías
               </a>
-              <ul className="dropdown-menu dropdown-menu-left">
+              <ul
+                className={`dropdown-menu dropdown-menu-left  ${
+                  current === "categories" && "d-block"
+                }`}
+              >
                 <li>
-                  <a className="dropdown-item" href="/about-us.html">
-                    Style 1
-                  </a>
+                  <Link className="dropdown-item" href="/categorias/politica">
+                    Política
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/about-us-v1.html">
-                    Style 2
-                  </a>
+                  <Link className="dropdown-item" href="/categorias/educacion">
+                    Educación
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="/categorias/salud">
+                    Salud
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="/categorias/deportes">
+                    Deportes
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="/categorias/cultura">
+                    Cultura
+                  </Link>
                 </li>
               </ul>
             </li>
 
+            {/*
+            // Sección Especiales
             <li className="nav-item">
-              <a className="nav-link  text-dark" href="#">
-                Category
+              <a className="nav-link  text-dark" href="/clasificados">
+                Clasificados
               </a>
             </li>
+              */}
             <li className="nav-item">
-              <a className="nav-link  text-dark" href="/contact.html">
-                Contact
-              </a>
+              <Link className="nav-link  text-dark" href="/contacto">
+                Contacto
+              </Link>
             </li>
           </ul>
         </nav>

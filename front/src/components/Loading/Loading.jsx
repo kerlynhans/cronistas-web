@@ -1,13 +1,44 @@
+"use client";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
+import styles from "./Loading.module.scss";
 import image from "@/images/loading.png";
 
 const Loading = () => {
-  return (
-    <div className="loading-container">
+  const pathname = usePathname();
+  const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setVisible(true);
+
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // simulate load time
+
+    return () => clearTimeout(timeout);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!loading) {
+      const fadeOut = setTimeout(() => setVisible(false), 1000); // match CSS duration
+      return () => clearTimeout(fadeOut);
+    }
+  }, [loading]);
+
+  return visible ? (
+    <div
+      className={`loading-container ${styles.loading} ${
+        loading ? styles.fadeIn : styles.fadeOut
+      }`}
+    >
       <div className="h-100 d-flex align-items-center justify-content-center">
         <ul className="list-unstyled">
-          <li>
+          {/* <li>
             <img src={image.src} alt="Imágen loader" height="100" />
-          </li>
+          </li> */}
           <li>
             <div className="spinner">
               <div className="rect1"></div> <div className="rect2"></div>{" "}
@@ -16,12 +47,12 @@ const Loading = () => {
             </div>
           </li>
           <li>
-            <p>Loading</p>
+            <p>Cargando</p>
           </li>
         </ul>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Loading;

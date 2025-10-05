@@ -90,7 +90,7 @@ const MenuDesktop = ({ menuShow }) => {
                   Categorías
                 </a>
                 <ul className="dropdown-menu animate fade-up">
-                  {/* Multiple Submenus
+                  {/* TODO: Multiple Submenus
                   <li>
                     <a className="dropdown-item icon-arrow" href="#">
                       Política

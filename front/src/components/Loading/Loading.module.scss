@@ -1,0 +1,18 @@
+.loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 1);
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.fadeIn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
