@@ -53,19 +53,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body cz-shortcut-listen="true">
-        {/* Global Loader 
+        {/* Global Loader */}
         <Loading />
-        */}
 
+        {/* Top Navbar */}
         <header className="bg-light">
-          {/* Top Navbar */}
           <NavbarTop />
-
-          {/* Menu Navbar */}
           <NavbarKit />
         </header>
+
+        {/* Main page content */}
         {children}
 
+        {/* Footer */}
         <section className="wrapper__section p-0">
           <div className="wrapper__section__components">
             <Footer />

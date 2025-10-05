@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import MainLogo from "@/components/Logo/MainLogo";
 import MenuNews from "@/components/MenuNews/MenuNews";
@@ -6,9 +7,24 @@ import Link from "next/link";
 import styles from "./MenuDesktop.module.scss";
 
 const MenuDesktop = ({ menuShow }) => {
+  const [isSticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50); // adjust threshold as needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
-      className={`${styles.menuDesktop} navigation-wrap navigation-shadow bg-white`}
+      className={`${
+        styles.menuDesktop
+      } navigation-wrap navigation-shadow bg-white ${
+        isSticky ? "fixed-top" : ""
+      }`}
     >
       <nav className="navbar navbar-hover navbar-expand-lg navbar-soft">
         <div className="container">

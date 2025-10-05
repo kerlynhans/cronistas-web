@@ -1,11 +1,23 @@
 .mainLogo {
-    position: relative;
-    span {
-        font-size: .7em;
-        position: absolute;
-        right:0;
-        bottom:-1.2em;
-        width: 100%;
-        text-align: right;
+  position: relative;
+
+  span {
+    font-size: 0.7em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 250px; /* even smaller for small phones */
     }
+  }
 }

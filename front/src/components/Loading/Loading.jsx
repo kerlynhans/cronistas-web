@@ -7,8 +7,8 @@ import image from "@/images/loading.png";
 
 const Loading = () => {
   const pathname = usePathname();
-  const [loading, setLoading] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -16,7 +16,7 @@ const Loading = () => {
 
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 2000); // simulate load time
+    }, 1000); // simulate load time
 
     return () => clearTimeout(timeout);
   }, [pathname]);
