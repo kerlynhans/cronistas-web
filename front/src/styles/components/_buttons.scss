@@ -2,9 +2,9 @@
 // Button
 // -----------------------------------------------------------------------------
 .btn {
-  font-size: 13px;
-  // padding: 10px 14px;
-  font-family: $text-font-paragraph;
+  font-size: 14px !important;
+  padding: 0.75rem 2rem;
+  font-family: $text-font-stack;
   font-weight: 600;
   &::before {
     position: absolute;
@@ -43,6 +43,27 @@
 .border-secondary {
   border-color: #ced4da !important;
 }
+
+.btn-primary {
+  background-color: var(--custom-primary);
+  border-color: var(--custom-primary);
+
+  &:hover {
+    border-color: var(--custom-primary-darker);
+    background-color: var(--custom-primary-hover);
+  }
+}
+
+.btn-outline-primary {
+  border-color: var(--custom-primary);
+  color: var(--custom-primary);
+
+  &:hover {
+    border-color: var(--custom-primary-hover);
+    background-color: var(--custom-primary);
+  }
+}
+
 /*================================================
 --> Social Buttons
 ==================================================*/
@@ -126,7 +147,7 @@
       background-color: transparent;
       box-shadow: none;
       &.facebook {
-        color: #3b5999;
+        color: #00ff00;
       }
       &.twitter {
         color: #55acee;

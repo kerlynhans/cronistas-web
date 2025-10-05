@@ -1,24 +1,24 @@
-import React from "react";
+import Link from "next/link";
 
 const CardArticle2 = () => {
   return (
     <div className="card__post">
       <div className="card__post__body">
-        <a href="./card-article-detail-v1.html">
+        <Link href="/articulos/nombre-articulo">
           <img
-            src="images/placeholder/800x600.jpg"
+            src="/images/placeholder/800x600.jpg"
             className="img-fluid"
             alt=""
           />
-        </a>
+        </Link>
         <div className="card__post__content bg__post-cover">
           <div className="card__post__category">covid-19</div>
           <div className="card__post__title">
             <h2>
-              <a href="#">
+              <Link href="/articulos/nombre-articulo">
                 Global solidarity to fight COVID-19, and indonesia stay safe and
                 health
-              </a>
+              </Link>
             </h2>
           </div>
           <div className="card__post__author-info">

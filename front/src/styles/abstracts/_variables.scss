@@ -23,7 +23,7 @@ $red: #f5365c;
 $orange: #cc0000;
 $green: #2dce89;
 
-$primary: $orange;
+$primary: #35854c;
 $success: $green;
 $info: $blue;
 $danger: $red;
@@ -89,3 +89,16 @@ $md-layout: "only screen and (min-width: 768px) and (max-width: 991px)";
 $sm-layout: "only screen and (max-width: 767px)";
 $large-mobile: "only screen and (max-width: 575px)";
 $small-mobile: "only screen and (max-width: 479px)";
+
+// Setup custom root variables.
+:root {
+  --custom-primary: #35854c;
+  --custom-primary-hover: #2b703f;
+  --custom-primary-darker: #296b3c;
+  --custom-link: #ee499a;
+}
+
+.text-primary {
+  //--bs-primary-rgb: 204, 0, 0; // Orange
+  --bs-primary-rgb: 238, 73, 154; // Pink
+}

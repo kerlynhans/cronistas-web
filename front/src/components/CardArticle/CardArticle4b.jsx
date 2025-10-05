@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const CardArticle4b = () => {
   return (
@@ -6,13 +6,13 @@ const CardArticle4b = () => {
       <div className="row ">
         <div className="col-md-5">
           <div className="card__post__transition">
-            <a href="#">
+            <Link href="/articulos/nombre-articulo">
               <img
-                src="images/placeholder/500x400.jpg"
+                src="/images/placeholder/500x400.jpg"
                 className="img-fluid w-100"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="col-md-7 my-auto pl-0">
@@ -22,18 +22,22 @@ const CardArticle4b = () => {
               <div className="card__post__author-info mb-2">
                 <ul className="list-inline">
                   <li className="list-inline-item">
-                    <span className="text-primary">by david hall</span>
+                    <span className="text-primary">
+                      Por Editorial Cronistas
+                    </span>
                   </li>
                   <li className="list-inline-item">
                     <span className="text-dark text-capitalize">
-                      descember 09, 2016
+                      Diciembre 09, 2025
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="card__post__title">
                 <h5>
-                  <a href="#">Exercitation Ullamco Laboris Nisi Ut Aliquip</a>
+                  <Link href="/articulos/nombre-articulo">
+                    Exercitation Ullamco Laboris Nisi Ut Aliquip
+                  </Link>
                 </h5>
                 <p className="d-none d-lg-block d-xl-block mb-0">
                   Maecenas accumsan tortor ut velit pharetra mollis. Proin eu

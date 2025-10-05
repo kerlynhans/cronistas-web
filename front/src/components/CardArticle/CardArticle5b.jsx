@@ -1,14 +1,16 @@
+import Link from "next/link";
+
 const CardArticle5b = () => {
   return (
     <div className="card__post card__post-list">
       <div className="image-sm">
-        <a href="./card-article-detail-v1.html">
+        <Link href="/articulos/nombre-articulo">
           <img
-            src="images/placeholder/500x400.jpg"
+            src="/images/placeholder/500x400.jpg"
             className="img-fluid"
             alt=""
           />
-        </a>
+        </Link>
       </div>
 
       <div className="card__post__body ">
@@ -16,20 +18,20 @@ const CardArticle5b = () => {
           <div className="card__post__author-info mb-2">
             <ul className="list-inline">
               <li className="list-inline-item">
-                <span className="text-primary">by david hall</span>
+                <span className="text-primary">Por david hall</span>
               </li>
               <li className="list-inline-item">
                 <span className="text-dark text-capitalize">
-                  descember 09, 2016
+                  Diciembre 09, 2025
                 </span>
               </li>
             </ul>
           </div>
           <div className="card__post__title">
             <h6>
-              <a href="./card-article-detail-v1.html">
+              <Link href="/articulos/nombre-articulo">
                 6 Best Tips for Building a Good Shipping Boat
-              </a>
+              </Link>
             </h6>
           </div>
         </div>

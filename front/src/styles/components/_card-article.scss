@@ -24,10 +24,15 @@
         clear: both;
         color: $white;
         display: inline-block;
-        font-size: 10px;
+        font-size: 11px;
         margin-bottom: 5px;
         padding: 5px 8px;
-        background: -moz-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* FF3.6+ */
+        background: -moz-linear-gradient(
+          285deg,
+          #2ea34f 27%,
+          #35854c 100%,
+          #ffffff 100%
+        ); /* FF3.6+ */
         background: -webkit-gradient(
           linear,
           285deg,
@@ -35,15 +40,35 @@
           color-stop(100%, DA1752),
           color-stop(100%, FFFFFF)
         ); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* IE10+ */
+        background: -webkit-linear-gradient(
+          285deg,
+          #2ea34f 27%,
+          #35854c 100%,
+          #ffffff 100%
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          285deg,
+          #2ea34f 27%,
+          #35854c 100%,
+          #ffffff 100%
+        ); /* Opera 11.10+ */
+        background: -ms-linear-gradient(
+          285deg,
+          #2ea34f 27%,
+          #35854c 100%,
+          #ffffff 100%
+        ); /* IE10+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-        background: linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* W3C */
+        background: linear-gradient(
+          285deg,
+          #2ea34f 27%,
+          #35854c 100%,
+          #ffffff 100%
+        ); /* W3C */
 
         line-height: 15px;
         text-transform: uppercase;
-        font-family: $text-font-paragraph;
+        font-family: $text-font-stack;
         font-weight: 600;
         @include mobile {
           position: absolute;
@@ -91,7 +116,7 @@
       .card__post__author-info {
         font-size: 12px;
         font-weight: 700;
-        font-family: $text-font-paragraph;
+        font-family: $text-font-stack;
         line-height: 1;
         margin: 0;
         padding: 0;
@@ -112,7 +137,7 @@
             span {
               color: $white;
               font-weight: 700;
-              font-size: 11px;
+              font-size: 12px;
             }
           }
         }
@@ -312,7 +337,12 @@
     font-size: 10px;
     margin-bottom: 5px;
     padding: 5px 8px;
-    background: -moz-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* FF3.6+ */
+    background: -moz-linear-gradient(
+      285deg,
+      #2ea34f 27%,
+      #35854c 100%,
+      #ffffff 100%
+    ); /* FF3.6+ */
     background: -webkit-gradient(
       linear,
       285deg,
@@ -320,15 +350,35 @@
       color-stop(100%, DA1752),
       color-stop(100%, FFFFFF)
     ); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* IE10+ */
+    background: -webkit-linear-gradient(
+      285deg,
+      #2ea34f 27%,
+      #35854c 100%,
+      #ffffff 100%
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      285deg,
+      #2ea34f 27%,
+      #35854c 100%,
+      #ffffff 100%
+    ); /* Opera 11.10+ */
+    background: -ms-linear-gradient(
+      285deg,
+      #2ea34f 27%,
+      #35854c 100%,
+      #ffffff 100%
+    ); /* IE10+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-    background: linear-gradient(285deg, #2EA34F 27%, #35854c 100%, #ffffff 100%); /* W3C */
+    background: linear-gradient(
+      285deg,
+      #2ea34f 27%,
+      #35854c 100%,
+      #ffffff 100%
+    ); /* W3C */
 
     line-height: 15px;
     text-transform: uppercase;
-    font-family: $text-font-paragraph;
+    font-family: $text-font-stack;
     font-weight: 600;
   }
   span {
@@ -709,7 +759,12 @@
       font-size: 10px;
       margin-bottom: 5px;
       padding: 5px 8px;
-      background: -moz-linear-gradient(285deg,  #2EA34F 27%, #35854c 100%, #ffffff 100%); /* FF3.6+ */
+      background: -moz-linear-gradient(
+        285deg,
+        #2ea34f 27%,
+        #35854c 100%,
+        #ffffff 100%
+      ); /* FF3.6+ */
       background: -webkit-gradient(
         linear,
         285deg,
@@ -717,11 +772,31 @@
         color-stop(100%, DA1752),
         color-stop(100%, FFFFFF)
       ); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(285deg,  #2EA34F 27%, #35854c 100%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(285deg,  #2EA34F 27%, #35854c 100%, #ffffff 100%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(285deg,  #2EA34F 27%, #35854c 100%, #ffffff 100%); /* IE10+ */
+      background: -webkit-linear-gradient(
+        285deg,
+        #2ea34f 27%,
+        #35854c 100%,
+        #ffffff 100%
+      ); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(
+        285deg,
+        #2ea34f 27%,
+        #35854c 100%,
+        #ffffff 100%
+      ); /* Opera 11.10+ */
+      background: -ms-linear-gradient(
+        285deg,
+        #2ea34f 27%,
+        #35854c 100%,
+        #ffffff 100%
+      ); /* IE10+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-      background: linear-gradient(285deg,  #2EA34F 27%, #35854c 100%, #ffffff 100%); /* W3C */
+      background: linear-gradient(
+        285deg,
+        #2ea34f 27%,
+        #35854c 100%,
+        #ffffff 100%
+      ); /* W3C */
 
       line-height: 15px;
       text-transform: uppercase;
@@ -754,10 +829,10 @@
         //   }
         // }
         span {
-          font-size: 11px;
+          font-size: 12px;
           font-weight: 700;
           text-transform: capitalize;
-          font-family: $text-font-paragraph;
+          font-family: $text-font-stack;
           @include mobile {
             font-size: 10px;
           }
@@ -768,7 +843,7 @@
       }
     }
     h5 {
-      font-size: 18px;;
+      font-size: 18px;
       @include mobile {
         font-size: 15px;
         line-height: 1.4;
@@ -797,7 +872,6 @@
 .article__entry-new {
   position: relative;
   .article__category {
-
     position: relative;
     top: 45px;
     left: 15px;

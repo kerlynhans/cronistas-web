@@ -13,7 +13,7 @@ const ThemeNews = () => {
       <div className="row">
         <div className="col-md-12">
           <aside className="wrapper__list__article">
-            <h4 className="border_section">Nuestras crónicas</h4>
+            <h4 className="border_section">Crónicas</h4>
           </aside>
         </div>
         <div className="col-md-12">

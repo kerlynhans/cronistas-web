@@ -1,24 +1,24 @@
-import React from "react";
+import Link from "next/link";
 
 const CardArticle1 = () => {
   return (
     <div className="card__post">
       <div className="card__post__body card__post__transition">
-        <a href="./card-article-detail-v1.html">
+        <Link href="/articulos/nombre-articulo">
           <img
-            src="images/placeholder/600x400.jpg"
+            src="/images/placeholder/600x400.jpg"
             className="img-fluid"
             alt=""
           />
-        </a>
+        </Link>
         <div className="card__post__content bg__post-cover">
           <div className="card__post__category">politics</div>
           <div className="card__post__title">
             <h5>
-              <a href="./card-article-detail-v1.html">
+              <Link href="/articulos/nombre-articulo">
                 Barack Obama and Family Visit borobudur temple enjoy holiday
                 indonesia.
-              </a>
+              </Link>
             </h5>
           </div>
           <div className="card__post__author-info">

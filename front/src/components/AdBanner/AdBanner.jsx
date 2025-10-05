@@ -7,7 +7,7 @@ const AdBanner = () => {
       <a href="#">
         <figure>
           <img
-            src="images/placeholder/600x400.jpg"
+            src="/images/placeholder/600x400.jpg"
             alt=""
             className="img-fluid"
           />
