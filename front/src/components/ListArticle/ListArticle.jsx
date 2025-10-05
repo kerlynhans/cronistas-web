@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ListArticle = ({ num }) => {
   return (
     <div className="card__post__list">
@@ -10,10 +12,10 @@ const ListArticle = ({ num }) => {
       <ul className="list-inline">
         <li className="list-inline-item">
           <h5>
-            <a href="#">
+            <Link href="/articulos/nombre-de-otro-articulo">
               Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T dalam 3 Bulan -
               CNBC Indonesia
-            </a>
+            </Link>
           </h5>
         </li>
       </ul>

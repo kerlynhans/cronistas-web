@@ -127,10 +127,6 @@
 }
 
 .top__news__slider {
-  .article__entry {
-    margin-left: 27px;
-  }
-
   /* the slides */
   .slick-slide {
     img {
@@ -148,9 +144,5 @@
         float: left;
       }
     }
-  }
-  /* the parent */
-  .slick-list {
-    margin-left: -27px;
   }
 }

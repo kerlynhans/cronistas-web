@@ -3,44 +3,11 @@
 import CardArticle12 from "@/components/CardArticle/CardArticle12";
 import CardArticle2 from "@/components/CardArticle/CardArticle2";
 import CardArticle1 from "@/components/CardArticle/CardArticle1";
-import Slider from "react-slick";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 const MainNews = () => {
-  const settings = {
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    autoplay: true,
-    loop: true,
-    dots: false,
-    lazyLoad: "progressive",
-    arrows: false,
-    // mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section>
       {/* Popular news  header */}
@@ -67,23 +34,33 @@ const MainNews = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <Slider className="top__news__slider" {...settings}>
-                <div className="item">
-                  <CardArticle12 />
-                </div>
-                <div className="item">
-                  <CardArticle12 />
-                </div>
-                <div className="item">
-                  <CardArticle12 />
-                </div>
-                <div className="item">
-                  <CardArticle12 />
-                </div>
-                <div className="item">
-                  <CardArticle12 />
-                </div>
-              </Slider>
+              <div className="top__news__slider">
+                <Swiper
+                  modules={[Autoplay]}
+                  autoplay={{ delay: 3000 }}
+                  spaceBetween={10}
+                  slidesPerView={2}
+                  loop={true}
+                  breakpoints={{
+                    400: {
+                      slidesPerView: 2,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                    },
+                    1024: {
+                      slidesPerView: 4,
+                      spaceBetween: 27,
+                    },
+                  }}
+                >
+                  {[...Array(5)].map((_, index) => (
+                    <SwiperSlide key={index} className="item">
+                      <CardArticle12 />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
         </div>

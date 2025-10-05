@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const TagsCloud = () => {
   return (
@@ -7,49 +7,49 @@ const TagsCloud = () => {
       <div className="blog-tags p-0">
         <ul className="list-inline">
           <li className="list-inline-item">
-            <a href="#">#property</a>
+            <Link href="/temas?q=theme">#property</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#sea</a>
+            <Link href="/temas?q=theme">#sea</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#programming</a>
+            <Link href="/temas?q=theme">#programming</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#sea</a>
+            <Link href="/temas?q=theme">#sea</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#property</a>
+            <Link href="/temas?q=theme">#property</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#life style</a>
+            <Link href="/temas?q=theme">#life style</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#technology</a>
+            <Link href="/temas?q=theme">#technology</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#framework</a>
+            <Link href="/temas?q=theme">#framework</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#sport</a>
+            <Link href="/temas?q=theme">#sport</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#game</a>
+            <Link href="/temas?q=theme">#game</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#wfh</a>
+            <Link href="/temas?q=theme">#wfh</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#sport</a>
+            <Link href="/temas?q=theme">#sport</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#game</a>
+            <Link href="/temas?q=theme">#game</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#wfh</a>
+            <Link href="/temas?q=theme">#wfh</Link>
           </li>
           <li className="list-inline-item">
-            <a href="#">#framework</a>
+            <Link href="/temas?q=theme">#framework</Link>
           </li>
         </ul>
       </div>

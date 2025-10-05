@@ -35,7 +35,7 @@ const CardArticle11a = () => {
           href="/articulos/nombre-articulo"
           className="btn btn-outline-primary mb-4 text-capitalize"
         >
-          read more
+          leer más
         </Link>
       </div>
     </div>

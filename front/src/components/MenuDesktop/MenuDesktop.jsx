@@ -1,6 +1,7 @@
 import SearchBar from "@/components/SearchBar/SearchBar";
 import MainLogo from "@/components/Logo/MainLogo";
-import PopularNews from "@/components/PopularNews/PopularNews";
+import MenuNews from "@/components/MenuNews/MenuNews";
+import Link from "next/link";
 
 import styles from "./MenuDesktop.module.scss";
 
@@ -27,39 +28,54 @@ const MenuDesktop = ({ menuShow }) => {
             id="main_nav99"
           >
             <ul className="navbar-nav ms-auto ">
+              <li className="nav-item">
+                <Link className="nav-link" href="/">
+                  <i className="fa fa-home"></i> Inicio
+                </Link>
+              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
                   data-toggle="dropdown"
+                  onClick={(e) => e.preventDefault()}
                 >
                   Secciones
                 </a>
                 <ul className="dropdown-menu animate fade-up">
                   <li>
-                    <a className="dropdown-item" href="/homepage-v1.html">
+                    <Link
+                      className="dropdown-item"
+                      href="/dialogos-sobre-discapacidad"
+                    >
                       Diálogos sobre discapacidad
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="homepage-v2.html">
+                    <Link
+                      className="dropdown-item"
+                      href="/el-zaguan-de-las-presencias"
+                    >
                       El zaguán de las presencias
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/homepage-v3.html">
+                    <Link
+                      className="dropdown-item"
+                      href="/el-libano-y-su-historia"
+                    >
                       El Líbano y su historia
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/homepage-v4.html">
+                    <Link className="dropdown-item" href="/homenaje-postumo">
                       Homenaje póstumo
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/homepage-v3.html">
+                    <Link className="dropdown-item" href="/tejiendo-sentidos">
                       Tejiendo sentidos
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -69,15 +85,17 @@ const MenuDesktop = ({ menuShow }) => {
                   className="nav-link dropdown-toggle"
                   href="#"
                   data-toggle="dropdown"
+                  onClick={(e) => e.preventDefault()}
                 >
                   Categorías
                 </a>
                 <ul className="dropdown-menu animate fade-up">
+                  {/* Multiple Submenus
                   <li>
                     <a className="dropdown-item icon-arrow" href="#">
                       Política
                     </a>
-                    <ul className="submenu dropdown-menu  animate fade-up">
+                    <ul className="submenu dropdown-menu animate fade-up">
                       <li>
                         <a
                           className="dropdown-item"
@@ -102,7 +120,6 @@ const MenuDesktop = ({ menuShow }) => {
                           Style 3
                         </a>
                       </li>
-
                       <li>
                         <a className="dropdown-item icon-arrow" href="">
                           Submenu item 3
@@ -132,75 +149,47 @@ const MenuDesktop = ({ menuShow }) => {
                       </li>
                     </ul>
                   </li>
+                  */}
+
                   <li>
-                    <a className="dropdown-item icon-arrow" href="#">
+                    <Link className="dropdown-item" href="/categorias/politica">
+                      Política
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      href="/categorias/educacion"
+                    >
                       Educación
-                    </a>
-                    <ul className="submenu dropdown-menu  animate fade-up">
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="/article-detail-v1.html"
-                        >
-                          Style 1
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="/article-detail-v2.html"
-                        >
-                          Style 2
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="/article-detail-v3.html"
-                        >
-                          Style 3
-                        </a>
-                      </li>
-                    </ul>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item icon-arrow" href="#">
+                    <Link className="dropdown-item" href="/categorias/salud">
                       Salud
-                    </a>
-                    <ul className="submenu dropdown-menu  animate fade-up">
-                      <li>
-                        <a className="dropdown-item" href="/search-result.html">
-                          Style 1
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="/search-result-v1.html"
-                        >
-                          Style 2
-                        </a>
-                      </li>
-                    </ul>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/login.html">
+                    <Link className="dropdown-item" href="/categorias/deportes">
                       Deportes
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/register.html">
+                    <Link className="dropdown-item" href="/categorias/cultura">
                       Cultura
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
 
+              {/* 
+              // Sección Especiales
               <li className="nav-item dropdown has-megamenu">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
                   data-toggle="dropdown"
+                  onClick={(e) => e.preventDefault()}
                 >
                   Especiales
                 </a>
@@ -213,23 +202,27 @@ const MenuDesktop = ({ menuShow }) => {
                       <h5 className="title">Recent news</h5>
                       <hr />
 
-                      {/* Popular news carousel */}
-                      <PopularNews />
+                      {// Menu news carousel }
+                      <MenuNews />
                     </div>
                   </div>
                 </div>
+              </li >
+              */}
+
+              {/* 
+              // Sección Especiales
+              <li className="nav-item">
+                <Link className="nav-link" href="/clasificados">
+                  Clasificados
+                </Link>
               </li>
+              */}
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Temas
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="/contact.html">
+                <Link className="nav-link" href="/contacto">
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
 

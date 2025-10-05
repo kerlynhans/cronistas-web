@@ -79,18 +79,6 @@ const ArticleDetail = () => {
                 <FontAwesomeIcon icon={faWhatsapp} />
                 <span>whatsapp</span>
               </a>
-            </li>{" "}
-            <li className="list-inline-item">
-              <a className="btn btn-social-o telegram" href="#">
-                <FontAwesomeIcon icon={faTelegram} />
-                <span>telegram</span>
-              </a>
-            </li>{" "}
-            <li className="list-inline-item">
-              <a className="btn btn-linkedin-o linkedin" href="#">
-                <FontAwesomeIcon icon={faLinkedin} />
-                <span>linkedin</span>
-              </a>
             </li>
           </ul>
         </div>

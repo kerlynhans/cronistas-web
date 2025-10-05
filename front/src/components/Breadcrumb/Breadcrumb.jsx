@@ -5,7 +5,7 @@ const Breadcrumb = () => {
     <ul className="breadcrumbs bg-white mb-4">
       <li className="breadcrumbs__item">
         <a href="index.html" className="breadcrumbs__url">
-          <i className="fa fa-home"></i> Home
+          <i className="fa fa-home"></i> Inicio
         </a>
       </li>
       <li className="breadcrumbs__item">

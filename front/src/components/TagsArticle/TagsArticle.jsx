@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const TagsArticle = () => {
   return (
@@ -8,19 +8,19 @@ const TagsArticle = () => {
           <i className="fa fa-tags"></i>
         </li>
         <li className="list-inline-item">
-          <a href="#">#property</a>
+          <Link href="/temas?q=theme">#property</Link>
         </li>
         <li className="list-inline-item">
-          <a href="#">#sea</a>
+          <Link href="/temas?q=theme">#sea</Link>
         </li>
         <li className="list-inline-item">
-          <a href="#">#programming</a>
+          <Link href="/temas?q=theme">#programming</Link>
         </li>
         <li className="list-inline-item">
-          <a href="#">#sea</a>
+          <Link href="/temas?q=theme">#sea</Link>
         </li>
         <li className="list-inline-item">
-          <a href="#">#property</a>
+          <Link href="/temas?q=theme">#property</Link>
         </li>
       </ul>
     </div>
