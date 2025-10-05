@@ -10,6 +10,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import SoyKoddy from "../SoyKoddy/SoyKoddy";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -113,9 +114,9 @@ const Footer = () => {
             <div className="col-md-6">
               <span>
                 © 2025{" "}
-                <a href="/" title="Página de inicio">
+                <Link href="/" title="Página de inicio">
                   Cronistas
-                </a>{" "}
+                </Link>{" "}
                 - su periódico. El informativo de interés regional.
               </span>
             </div>

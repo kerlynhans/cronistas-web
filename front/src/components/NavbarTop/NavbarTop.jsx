@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./NavbarTop.module.scss";
+import Link from "next/link";
 
 const NavbarTop = () => {
   return (
@@ -14,24 +15,25 @@ const NavbarTop = () => {
         <div className="row">
           <div className="col-sm-12 col-md-5">
             <div className="topbar-left">
-              <div className="topbar-text">Lunes, Marzo 22, 2020</div>
+              <div className={`topbar-text ${styles.text}`}>
+                Lunes, Marzo 22, 2020
+              </div>
             </div>
           </div>
           <div className="col-sm-12 col-md-7">
             <div className="list-unstyled topbar-right">
-              <ul className="topbar-link">
+              <ul className={`topbar-link ${styles.text}`}>
                 <li>
-                  <a href="#" title="Contáctanos">
+                  <Link href="/contacto" title="Contáctanos">
                     Contáctanos
-                  </a>
+                  </Link>
                 </li>
-                
+
                 {/* <li>
                   <a href="#" title="Login o registro">
                     Login / Registro
                   </a>
                 </li> */}
-                
               </ul>
               <ul className="topbar-sosmed">
                 <li>

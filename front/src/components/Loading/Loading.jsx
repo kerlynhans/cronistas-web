@@ -23,7 +23,7 @@ const Loading = () => {
 
   useEffect(() => {
     if (!loading) {
-      const fadeOut = setTimeout(() => setVisible(false), 1000); // match CSS duration
+      const fadeOut = setTimeout(() => setVisible(false), 500); // match CSS duration
       return () => clearTimeout(fadeOut);
     }
   }, [loading]);

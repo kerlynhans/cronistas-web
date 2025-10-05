@@ -102,3 +102,17 @@ $small-mobile: "only screen and (max-width: 479px)";
   //--bs-primary-rgb: 204, 0, 0; // Orange
   --bs-primary-rgb: 238, 73, 154; // Pink
 }
+
+.btn-primary {
+  --bs-btn-active-bg: #296b3c;
+  --bs-btn-active-border-color: #35854c;
+}
+
+.btn-outline-primary {
+  --bs-btn-active-bg: #296b3c;
+  --bs-btn-active-border-color: #35854c;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #d3ebda;
+}
