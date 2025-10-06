@@ -47,7 +47,9 @@ export default function Zaguan() {
                   <CardArticle4b />
                   <CardArticle4b />
                 </div>
-                <Paginator />
+                <div className="mx-auto">
+                  <Paginator />
+                </div>
               </aside>
             </div>
 

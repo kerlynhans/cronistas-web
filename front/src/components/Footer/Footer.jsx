@@ -1,6 +1,7 @@
-import React from "react";
+import Link from "next/link";
 import FormNewsletter from "@/components/FormNewsletter/FormNewsletter";
 import MainLogo from "@/components/Logo/MainLogo";
+import SoyKoddy from "@/components/SoyKoddy/SoyKoddy";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,9 +9,8 @@ import {
   faXTwitter,
   faInstagram,
   faYoutube,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import SoyKoddy from "../SoyKoddy/SoyKoddy";
-import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
               </div>
               <div className="border-line"></div>
               <div className="widget__footer">
-                <h4 className="footer-title">Síguenos</h4>
+                <h4 className="footer-title">Encuéntranos</h4>
 
                 <p>
                   <button className="btn btn-social btn-social-o facebook me-1">
@@ -38,6 +38,9 @@ const Footer = () => {
                   </button>
                   <button className="btn btn-social btn-social-o twitter me-1">
                     <FontAwesomeIcon icon={faXTwitter} />
+                  </button>
+                  <button className="btn btn-social btn-social-o whatsapp me-1">
+                    <FontAwesomeIcon icon={faWhatsapp} />
                   </button>
                   <button className="btn btn-social btn-social-o instagram me-1">
                     <FontAwesomeIcon icon={faInstagram} />
@@ -55,43 +58,43 @@ const Footer = () => {
                 <div className="link__category">
                   <ul className="list-unstyled ">
                     <li className="list-inline-item">
-                      <a href="#">apps</a>
+                      <Link href="/temas?=theme">apps</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">business</a>
+                      <Link href="/temas?=theme">business</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">entertainment</a>
+                      <Link href="/temas?=theme">entertainment</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">fashion</a>
+                      <Link href="/temas?=theme">fashion</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Food</a>
+                      <Link href="/temas?=theme">Food</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Gadget</a>
+                      <Link href="/temas?=theme">Gadget</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Gaming</a>
+                      <Link href="/temas?=theme">Gaming</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Health</a>
+                      <Link href="/temas?=theme">Health</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Lifestyle</a>
+                      <Link href="/temas?=theme">Lifestyle</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Science</a>
+                      <Link href="/temas?=theme">Science</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Travel</a>
+                      <Link href="/temas?=theme">Travel</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Startup</a>
+                      <Link href="/temas?=theme">Startup</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">Sports</a>
+                      <Link href="/temas?=theme">Sports</Link>
                     </li>
                   </ul>
                 </div>

@@ -13,8 +13,6 @@ import Footer from "@/components/Footer/Footer";
 //styles
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "swiper/css/bundle";
 import "@/styles/main.scss";
 

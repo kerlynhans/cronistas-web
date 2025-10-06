@@ -44,10 +44,6 @@ export default function Home() {
                   <AdBanner />
                 </div>
               </div>
-
-              <div className="mx-auto">
-                <Paginator />
-              </div>
             </div>
           </div>
         </div>

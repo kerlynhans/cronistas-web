@@ -47,8 +47,10 @@ export default function Senses() {
                   <CardArticle4b />
                   <CardArticle4b />
                 </div>
-                <Paginator />
               </aside>
+              <div className="mx-auto">
+                <Paginator />
+              </div>
             </div>
 
             <div className="col-lg-4">
