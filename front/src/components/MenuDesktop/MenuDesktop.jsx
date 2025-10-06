@@ -76,6 +76,11 @@ const MenuDesktop = ({ menuShow }) => {
                     </Link>
                   </li>
                   <li>
+                    <Link className="dropdown-item" href="/tejiendo-sentidos">
+                      Tejiendo sentidos
+                    </Link>
+                  </li>
+                  <li>
                     <Link
                       className="dropdown-item"
                       href="/el-libano-y-su-historia"
@@ -86,11 +91,6 @@ const MenuDesktop = ({ menuShow }) => {
                   <li>
                     <Link className="dropdown-item" href="/homenaje-postumo">
                       Homenaje póstumo
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="/tejiendo-sentidos">
-                      Tejiendo sentidos
                     </Link>
                   </li>
                 </ul>
