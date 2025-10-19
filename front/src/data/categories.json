@@ -1,0 +1,32 @@
+{
+  "politica": {
+    "label": "Política"
+  },
+  "deportes": {
+    "label": "Deportes"
+  },
+  "salud": {
+    "label": "Salud"
+  },
+  "cultura": {
+    "label": "Cultura"
+  },
+  "dialogos-sobre-discapacidad": {
+    "label": "Diálogos sobre discapacidad"
+  },
+  "el-zaguan-de-las-presencias": {
+    "label": "El zaguán de las presencias"
+  },
+  "tejiendo-sentidos": {
+    "label": "Tejiendo sentidos"
+  },
+  "el-libano-y-su-historia": {
+    "label": "El Libano y su historia"
+  },
+  "homenaje-postumo": {
+    "label": "Homenaje póstumo"
+  },
+  "recordemos-nuestra-historia": {
+    "label": "Recordemos nuestra historia"
+  }
+}

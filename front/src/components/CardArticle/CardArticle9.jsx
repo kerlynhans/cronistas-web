@@ -2,7 +2,7 @@ import React from "react";
 
 const CardArticle9 = () => {
   return (
-    <div className="card__post__transition mt-4">
+    <article className="card__post__transition mt-4">
       <div className="card__post__body card__post-height ">
         <a href="#">
           <img
@@ -22,7 +22,7 @@ const CardArticle9 = () => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

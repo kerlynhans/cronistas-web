@@ -1,14 +1,15 @@
-import {
-  Poppins,
-  Playfair,
-  Montserrat,
-  Noto_Serif,
-  Literata,
-} from "next/font/google";
+import { Poppins, Literata } from "next/font/google";
+
 import Loading from "@/components/Loading/Loading";
 import NavbarTop from "@/components/NavbarTop/NavbarTop";
 import NavbarKit from "@/components/NavbatKit/NavbatKit";
-import Footer from "@/components/Footer/Footer";
+import FooterMenu from "@/components/FooterMenu/FooterMenu";
+import BottomBar from "@/components/BottomBar/BottomBar";
+
+//Date formating
+import moment from "moment";
+import "moment/locale/es";
+moment.locale("es");
 
 //styles
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -28,16 +29,6 @@ const poppinsSans = Poppins({
   weight: ["500", "600", "700"],
 });
 
-const playfairSerif = Playfair({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-const monserratSerif = Montserrat({
-  variable: "--font-monserrat",
-  subsets: ["latin"],
-});
-
 export const metadata = {
   title: {
     template: "%s :: Cronistas Su Periódico",
@@ -54,21 +45,20 @@ export default function RootLayout({ children }) {
         {/* Global Loader */}
         <Loading />
 
-        {/* Top Navbar */}
-        <header className="bg-light">
+        {/* Header */}
+        <header>
           <NavbarTop />
           <NavbarKit />
         </header>
 
-        {/* Main page content */}
+        {/* Page content */}
         {children}
 
         {/* Footer */}
-        <section className="wrapper__section p-0">
-          <div className="wrapper__section__components">
-            <Footer />
-          </div>
-        </section>
+        <footer>
+          <FooterMenu />
+          <BottomBar />
+        </footer>
       </body>
     </html>
   );

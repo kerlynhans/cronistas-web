@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CardArticle5b = () => {
   return (
-    <div className="card__post card__post-list">
+    <article className="card__post card__post-list">
       <div className="image-sm">
         <Link href="/articulos/nombre-articulo">
           <img
@@ -36,7 +36,7 @@ const CardArticle5b = () => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

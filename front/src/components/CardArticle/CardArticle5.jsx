@@ -1,14 +1,17 @@
 import Link from "next/link";
+import ArticleImage from "../ArticleImage/ArticleImage";
 
-const CardArticle5 = () => {
+const CardArticle5 = ({ data }) => {
   return (
-    <div className="card__post card__post-list">
+    <article className="card__post card__post-list">
       <div className="image-sm">
-        <Link href="/articulos/nombre-articulo">
-          <img
-            src="/images/placeholder/500x400.jpg"
-            className="img-fluid"
-            alt=""
+        <Link href={data.url}>
+          <ArticleImage
+            src={data.thumbnail}
+            w="304"
+            h="171"
+            alt={data.title}
+            placeholder="/images/placeholder/500x400.jpg"
           />
         </Link>
       </div>
@@ -18,23 +21,21 @@ const CardArticle5 = () => {
           <div className="card__post__author-info mb-2">
             <ul className="list-inline">
               <li className="list-inline-item">
-                <span className="text-primary">Por Editorial Cronistas</span>
+                <span className="text-primary">Por {data.author}</span>
               </li>
               <li className="list-inline-item">
-                <span className="text-dark text-capitalize">Dic 09, 2025</span>
+                <span className="text-dark text-capitalize">{data.date}</span>
               </li>
             </ul>
           </div>
           <div className="card__post__title">
             <h6>
-              <Link href="/articulos/nombre-articulo">
-                6 Best Tips for Building a Good Shipping Boat
-              </Link>
+              <Link href={data.url}>{data.title}</Link>
             </h6>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

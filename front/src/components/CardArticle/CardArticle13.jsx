@@ -2,7 +2,7 @@ import React from "react";
 
 const CardArticle13 = () => {
   return (
-    <div className="article__entry-new ">
+    <article className="article__entry-new">
       <div className="article__category">life style</div>
       <div className="article__image articel__image__transition">
         <a href="#">
@@ -36,7 +36,7 @@ const CardArticle13 = () => {
           </p>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

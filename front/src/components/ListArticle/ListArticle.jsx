@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ListArticle = ({ num }) => {
   return (
-    <div className="card__post__list">
+    <article className="card__post__list">
       <div className="list-number">
         <span>{num}</span>
       </div>
@@ -19,7 +19,7 @@ const ListArticle = ({ num }) => {
           </h5>
         </li>
       </ul>
-    </div>
+    </article>
   );
 };
 

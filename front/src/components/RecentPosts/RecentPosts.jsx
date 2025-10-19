@@ -1,7 +1,9 @@
 import CardArticle1 from "../CardArticle/CardArticle1";
 import CardArticle5b from "../CardArticle/CardArticle5b";
 
-const RecentPosts = () => {
+const RecentPosts = ({ articles }) => {
+  //if (!articles) return null;
+
   return (
     <div className="col-md-12 col-lg-8">
       <div className="wrapper__list__article">
