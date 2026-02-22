@@ -8,7 +8,7 @@ import PopularPosts from "@/components/PopularPosts/PopularPosts";
 import RecentPosts from "@/components/RecentPosts/RecentPosts";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import TagsCloud from "@/components/TagsCloud/TagsCloud";
-import ThemeNews from "@/components/ThemeNews/ThemeNews";
+import PostsChronicles from "@/components/PostsChronicles/PostsChronicles";
 import TrendingNews from "@/components/TrendingNews/TrendingNews";
 
 import { getHomeArticles } from "@/services/Articles";
@@ -32,30 +32,30 @@ export default async function HomePage() {
         <div className="popular__section-news">
           <div className="container">
             <div className="row">
-              {/* Highlighted news: Destacados */}
-              <RecentPosts />
+              {/* Highlighted news: Artículos recientes */}
+              <RecentPosts articles={articles.featured} />
               {/* Most readed news: Lo mas leido */}
-              <PopularPosts />
+              <PopularPosts articles={articles.topreads} />
             </div>
           </div>
         </div>
 
         {/* Chronicles with slider */}
-        <ThemeNews />
+        <PostsChronicles articles={articles.chronicles} />
 
         <div className="mt-4">
           <div className="container">
             <div className="row">
               <div className="col-md-8">
                 {/* Latest news: Actualidad */}
-                <GridNews />
-                {/* Recent news: Publicaciones recientes */}
-                <ListNews />
+                <GridNews articles={articles.current} />
+                {/* Recent news: Más artículos */}
+                <ListNews articles={articles.others} />
               </div>
               <div className="col-md-4">
                 <div className="sticky-top">
-                  {/* Must read news: Debes leer */}
-                  <LatestPosts />
+                  {/* Must read news: Recomendados */}
+                  <LatestPosts articles={articles.mustread} />
 
                   {/* Other sidebar elements */}
                   <SocialMedia />

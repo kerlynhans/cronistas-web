@@ -2,39 +2,39 @@ import CardArticle1 from "../CardArticle/CardArticle1";
 import CardArticle5b from "../CardArticle/CardArticle5b";
 
 const RecentPosts = ({ articles }) => {
-  //if (!articles) return null;
+  if (!articles) return null;
 
   return (
     <div className="col-md-12 col-lg-8">
       <div className="wrapper__list__article">
-        <h4 className="border_section">Destacados</h4>
+        <h4 className="border_section">Artículos recientes</h4>
       </div>
       <div className="row ">
         <div className="col-sm-12 col-md-6 mb-4">
-          <CardArticle1 />
+          <CardArticle1 data={articles[0]} />
         </div>
         <div className="col-sm-12 col-md-6 mb-4">
-          <CardArticle1 />
+          <CardArticle1 data={articles[1]} />
         </div>
       </div>
       <div className="row ">
         <div className="col-sm-12 col-md-6">
           <div className="wrapp__list__article-responsive">
             <div className="mb-3">
-              <CardArticle5b />
+              <CardArticle5b data={articles[2]} />
             </div>
             <div className="mb-3">
-              <CardArticle5b />
+              <CardArticle5b data={articles[4]} />
             </div>
           </div>
         </div>
         <div className="col-sm-12 col-md-6 ">
           <div className="wrapp__list__article-responsive">
             <div className="mb-3">
-              <CardArticle5b />
+              <CardArticle5b data={articles[3]} />
             </div>
             <div className="mb-3">
-              <CardArticle5b />
+              <CardArticle5b data={articles[5]} />
             </div>
           </div>
         </div>

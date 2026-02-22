@@ -7,7 +7,9 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-const ThemeNews = () => {
+const PostsChronicles = ({ articles }) => {
+  if (!articles.length) return null;
+
   return (
     <div className="container">
       <div className="row">
@@ -48,9 +50,9 @@ const ThemeNews = () => {
                 },
               }}
             >
-              {[...Array(5)].map((_, index) => (
+              {articles.map((article, index) => (
                 <SwiperSlide key={index} className="item">
-                  <CardArticle11 />
+                  <CardArticle11 data={article} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -67,4 +69,4 @@ const ThemeNews = () => {
   );
 };
 
-export default ThemeNews;
+export default PostsChronicles;

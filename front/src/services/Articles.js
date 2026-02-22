@@ -17,6 +17,12 @@ export const getHomeArticles = async () => {
     const grouped = {
       flash: [],
       main: [],
+      chronicles: [],
+      featured: [],
+      topreads: [],
+      current: [],
+      mustread: [],
+      others: [],
     };
 
     for (const item of data) {
@@ -32,10 +38,11 @@ export const getHomeArticles = async () => {
       item.category = categories[item.category].label;
 
       //Create grouped articles.
-      if (item.sticky === "True") {
-        grouped.flash.push(item);
+      if (item.homepage !== "") {
+        grouped[item.homepage].push(item);
       } else {
-        grouped.main.push(item);
+        //The rest
+        grouped.others.push(item);
       }
     }
 

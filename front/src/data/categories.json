@@ -1,32 +1,42 @@
 {
   "politica": {
-    "label": "Política"
+    "label": "Política",
+    "isChronicle": false
   },
   "deportes": {
-    "label": "Deportes"
+    "label": "Deportes",
+    "isChronicle": false
   },
   "salud": {
-    "label": "Salud"
+    "label": "Salud",
+    "isChronicle": false
   },
   "cultura": {
-    "label": "Cultura"
+    "label": "Cultura",
+    "isChronicle": false
   },
   "dialogos-sobre-discapacidad": {
-    "label": "Diálogos sobre discapacidad"
+    "label": "Diálogos sobre discapacidad",
+    "isChronicle": true
   },
   "el-zaguan-de-las-presencias": {
-    "label": "El zaguán de las presencias"
+    "label": "El zaguán de las presencias",
+    "isChronicle": true
   },
   "tejiendo-sentidos": {
-    "label": "Tejiendo sentidos"
+    "label": "Tejiendo sentidos",
+    "isChronicle": true
   },
   "el-libano-y-su-historia": {
-    "label": "El Libano y su historia"
+    "label": "El Libano y su historia",
+    "isChronicle": true
   },
   "homenaje-postumo": {
-    "label": "Homenaje póstumo"
+    "label": "Homenaje póstumo",
+    "isChronicle": true
   },
   "recordemos-nuestra-historia": {
-    "label": "Recordemos nuestra historia"
+    "label": "Recordemos nuestra historia",
+    "isChronicle": true
   }
 }

@@ -1,6 +1,8 @@
 import React from "react";
 
-const CardArticle9 = () => {
+const CardArticle9 = ({ data }) => {
+  if (!data) return null;
+  
   return (
     <article className="card__post__transition mt-4">
       <div className="card__post__body card__post-height ">

@@ -12,7 +12,7 @@ const SocialMedia = () => {
 
   return (
     <aside className="wrapper__list__article">
-      <h4 className="border_section">Redes sociales</h4>
+      <h4 className="border_section">Nuestras Redes</h4>
       <div className="wrap__social__media">
         {channels.facebook && (
           <a href={channels.facebook.url} target="_blank">

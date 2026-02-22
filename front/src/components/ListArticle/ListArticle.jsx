@@ -1,21 +1,20 @@
 import Link from "next/link";
 
-const ListArticle = ({ num }) => {
+const ListArticle = ({ num, data }) => {
+  if (!data) return null;
+
   return (
     <article className="card__post__list">
       <div className="list-number">
         <span>{num}</span>
       </div>
       <a href="#" className="category">
-        covid-19
+        {data.category}
       </a>
       <ul className="list-inline">
         <li className="list-inline-item">
           <h5>
-            <Link href="/articulos/nombre-de-otro-articulo">
-              Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T dalam 3 Bulan -
-              CNBC Indonesia
-            </Link>
+            <Link href={data.url}>{data.title}</Link>
           </h5>
         </li>
       </ul>
