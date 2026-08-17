@@ -1,14 +1,16 @@
 import categories from "@/data/categories.json";
+import { drupal, testDrupalConnection } from "@/services/Drupal";
 import moment from "moment";
 import "moment/locale/es";
 
 /**
- * Fetech all featured contents to show in home.
- * @returns Array with articles.
+ * Fetch all featured contents to show in homepage.
+ * @returns Object with articles by section.
  */
 export const getHomeArticles = async () => {
   const host = process.env.NEXT_PUBLIC_CMS;
   const url = `${host}/api/v1/highlights`;
+
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
@@ -27,12 +29,10 @@ export const getHomeArticles = async () => {
 
     for (const item of data) {
       //Change php seconds to js milliseconds and format date
-      const formattedDate = moment(Number(item.date) * 1000).format(
-        "MMM DD, YYYY"
-      );
+      const formattedDate = moment(item.date).format("MMM DD, YYYY");
       item.date = formattedDate;
 
-      //Include full path url.
+      //Format results to include absolute urls.
       item.thumbnail = item.thumbnail ? host + item.thumbnail : "";
       item.image = item.image ? host + item.image : "";
       item.category = categories[item.category].label;
@@ -48,7 +48,58 @@ export const getHomeArticles = async () => {
 
     return grouped;
   } catch (error) {
-    console.error("Error fetching or processing data:", error);
+    console.error(
+      "(getHomeArticles) Error fetching or processing data:",
+      error,
+    );
     return null;
   }
+};
+
+/**
+ * Fetch a single article.
+ * @param   path Indicate url to render.
+ * @returns Object with articles by section.
+ */
+export const getSingleArticle = async (path) => {
+  // Decodifica la URL en un recurso de Drupal
+  const resource = await drupal.translatePath(path);
+  if (resource) {
+    const article = await drupal.getResource(
+      resource.jsonapi.resourceName,
+      resource.entity.uuid,
+      {
+        params: {
+          include:
+            "field_featured_image.field_media_image, field_tags, uid.field_user_avatar",
+        },
+      },
+    );
+
+    if (article) {
+      console.log("===== ARTICLE ====", article);
+
+      const featuredImage =
+        article.field_featured_image.field_media_image.image_style_uri[
+          "16_9_1008x567_focal_point_webp"
+        ];
+      const altImage =
+        article.field_featured_image?.resourceIdObjMeta?.alt || article.title;
+      const formattedDate = moment(article.created).format("MMM DD, YYYY");
+      const author = article.uid?.display_name || article.uid?.name;
+
+      //Create Article object.
+      return {
+        title: article.title,
+        body: article.field_content.processed,
+        tags: article.field_tags,
+        formattedDate,
+        featuredImage,
+        altImage,
+        author,
+      };
+    }
+  }
+
+  return null;
 };

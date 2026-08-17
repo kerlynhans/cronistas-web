@@ -6,6 +6,7 @@ const TopBanner = ({ data }) => {
           <img src={data.image} alt="Banner top" className="img-fluid" />
         </a>
       </div>
+      {/**
       <div className="article__content">
         <h5>
           <a href={data.cta} target="_blank">
@@ -13,6 +14,7 @@ const TopBanner = ({ data }) => {
           </a>
         </h5>
       </div>
+      */}
     </div>
   );
 };

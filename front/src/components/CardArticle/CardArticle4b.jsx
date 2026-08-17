@@ -1,3 +1,4 @@
+import ArticleImage from "@/components/ArticleImage/ArticleImage";
 import Link from "next/link";
 
 const CardArticle4b = ({ data }) => {

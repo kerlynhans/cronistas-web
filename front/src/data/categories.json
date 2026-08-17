@@ -15,6 +15,14 @@
     "label": "Cultura",
     "isChronicle": false
   },
+  "educacion": {
+    "label": "Educación",
+    "isChronicle": false
+  },
+  "vida": {
+    "label": "Vida",
+    "isChronicle": false
+  },
   "dialogos-sobre-discapacidad": {
     "label": "Diálogos sobre discapacidad",
     "isChronicle": true

@@ -5,10 +5,12 @@
   background-color: $black;
   padding: 0;
   min-height: 50px;
+
   .topbar-left {
     @include tablet {
       text-align: center;
     }
+
     .topbar-text {
       color: $white;
       padding: 10px 0;
@@ -21,30 +23,37 @@
       }
     }
   }
+
   .topbar-right {
     text-align: right;
     line-height: 30px;
+
     @include tablet {
       text-align: center;
       margin: 0;
     }
+
     @include mobile {
       text-align: center;
     }
+
     .topbar-link {
       display: inline-table;
       padding: 10px;
       padding-left: 0;
       margin: 0;
+
       @include mobile {
         padding: 0;
       }
+
       li {
         list-style: none;
         float: left;
         color: $white;
         padding: 0 10px;
         font-size: 12px;
+
         a {
           color: $white;
           font-size: 13px;
@@ -56,22 +65,27 @@
         }
       }
     }
+
     .topbar-sosmed {
       display: inline-table;
       padding: 6px;
       padding-left: 0;
       margin: 0;
+
       @include tablet {
         display: none;
       }
+
       li {
         list-style: none;
         float: left;
         font-size: 16px;
         padding: 0 10px;
+
         @include mobile {
           font-size: 12px;
         }
+
         a {
           color: white;
           font-size: 16px;
@@ -103,26 +117,32 @@
     border-bottom: 0.3em solid transparent;
     border-left: 0.3em solid;
   }
+
   .dropdown-menu .dropdown-menu {
     margin-left: 0;
     margin-right: 0;
   }
+
   .dropdown-menu li {
     position: relative;
   }
+
   .nav-item .submenu {
     display: none;
     position: absolute;
     left: 100%;
     top: -7px;
   }
+
   .nav-item .submenu-left {
     right: 100%;
     left: auto;
   }
+
   .dropdown-menu > li:hover {
     background-color: #f1f1f1;
   }
+
   .dropdown-menu > li:hover > .submenu {
     display: block;
   }
@@ -133,15 +153,18 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
   .navbar .has-megamenu {
     position: static !important;
   }
+
   .navbar .megamenu {
     left: 0;
     right: 0;
     width: 100%;
     padding: 20px;
   }
+
   .navbar .nav-link {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -154,15 +177,18 @@
   box-shadow: 2px 6px 28px -22px #dadada;
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=28, Direction=135, Color=#000000);
   border-top: 1px solid #f1f1f1;
+
   @include mobile {
     border-top: 0;
   }
 }
+
 .navigation-wrap {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+
   .navbar-nav {
     .nav-item {
       .dropdown-menu {
@@ -172,24 +198,29 @@
         padding-bottom: 0px;
         box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
         z-index: 1022;
+
         @include mobile {
           max-width: 100%;
         }
+
         .dropdown-item {
           border-bottom: 1px solid #ddd;
           padding: 10px 15px;
         }
       }
+
       .submenu {
         border-top: 0px;
         top: 0;
       }
     }
+
     .has-megamenu {
       .megamenu {
         .col-megamenu {
           padding: 15px 0;
           max-width: 100%;
+
           ul {
             li {
               padding: 10px 0;
@@ -208,17 +239,20 @@
       padding: 0.75rem 0;
     }
   }
+
   .dropdown {
     @include mobile {
       font-weight: 700;
     }
   }
+
   .dropdown-menu {
     @include mobile {
       padding: 0;
       width: 100%;
       font-weight: 700;
     }
+
     .dropdown-item {
       @include mobile {
         font-weight: 600;
@@ -239,9 +273,11 @@
 .show > .dropdown-toggle[data-toggle="dropdown"]:after {
   content: "\f106";
 }
+
 .dropdown-toggle[data-toggle="dropdown"] {
   display: flex;
 }
+
 .dropdown-toggle[data-toggle="dropdown"]:after {
   border: none;
 }
@@ -254,6 +290,7 @@
   .search {
     width: 24px;
     max-width: 100%;
+
     a {
       &:hover {
         color: $black;
@@ -261,6 +298,7 @@
     }
   }
 }
+
 .top-search {
   background-color: $white;
   top: 85px;
@@ -272,6 +310,7 @@
   width: 100%;
   z-index: 51;
   display: none;
+
   .input-group {
     max-width: 100%;
     margin: 0 auto;
@@ -320,6 +359,7 @@
       .list-group-item {
         border: 0;
         font-weight: 700;
+
         @include mobile {
           border: 0;
           font-weight: 700;
@@ -333,6 +373,7 @@
         border-top: 1px solid #dee2e6;
       }
     }
+
     .modal-footer {
       p {
         font-size: 10px;
@@ -345,6 +386,7 @@
 
 .fixed-top {
   animation: smoothScroll 1s forwards;
+
   .navbar-nav {
     .nav-link {
       color: $black;

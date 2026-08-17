@@ -8,6 +8,7 @@
       font-size: 22px;
     }
   }
+
   h4 {
     color: $gray-800;
     line-height: 24px;
@@ -15,6 +16,7 @@
       font-size: 18px;
     }
   }
+
   p {
     font-size: 16px;
     line-height: 28px;
@@ -34,6 +36,7 @@
       height: auto;
       margin: 0 auto;
     }
+
     figcaption {
       width: 100%;
       border: 1px solid #eee;
@@ -41,22 +44,27 @@
       text-align: center;
       background-color: #fff;
       border-radius: 3px;
+
       h4 {
         font-size: 16px;
       }
+
       small {
         font-family: $text-font-paragraph;
       }
+
       ul.list-inline {
         display: block;
         margin-top: 10px;
         margin-bottom: 10px;
+
         li.list-inline-item {
           margin: 0;
           margin-right: 0px;
           margin-right: 10px;
           padding: 0;
           list-style: none;
+
           a {
             float: left;
             color: #fff;
@@ -65,6 +73,7 @@
             width: 30px;
             background-color: $primary;
             padding: 5px;
+
             &:hover {
               opacity: 0.5;
             }

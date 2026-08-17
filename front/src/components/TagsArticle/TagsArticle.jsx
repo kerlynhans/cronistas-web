@@ -1,27 +1,20 @@
 import Link from "next/link";
 
-const TagsArticle = () => {
+const TagsArticle = ({ tags }) => {
+  if (!tags.length) {
+    return null;
+  }
   return (
     <div className="blog-tags">
       <ul className="list-inline">
         <li className="list-inline-item">
           <i className="fa fa-tags"></i>
         </li>
-        <li className="list-inline-item">
-          <Link href="/temas?q=theme">#property</Link>
-        </li>
-        <li className="list-inline-item">
-          <Link href="/temas?q=theme">#sea</Link>
-        </li>
-        <li className="list-inline-item">
-          <Link href="/temas?q=theme">#programming</Link>
-        </li>
-        <li className="list-inline-item">
-          <Link href="/temas?q=theme">#sea</Link>
-        </li>
-        <li className="list-inline-item">
-          <Link href="/temas?q=theme">#property</Link>
-        </li>
+        {tags.map((tag) => (
+          <li className="list-inline-item">
+            <Link href={`/temas?q=${tag.name}`}>#{tag.name}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

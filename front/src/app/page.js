@@ -23,8 +23,10 @@ export default async function HomePage() {
     <main>
       {/* Flash news slider */}
       <TrendingNews articles={articles.flash} />
+
       {/* Main news with slider */}
       <MainNews articles={articles.main} />
+
       {/* Main banners carousel */}
       <MainBanners banners={banners.highlight} />
 
@@ -34,6 +36,7 @@ export default async function HomePage() {
             <div className="row">
               {/* Highlighted news: Artículos recientes */}
               <RecentPosts articles={articles.featured} />
+
               {/* Most readed news: Lo mas leido */}
               <PopularPosts articles={articles.topreads} />
             </div>
@@ -49,6 +52,7 @@ export default async function HomePage() {
               <div className="col-md-8">
                 {/* Latest news: Actualidad */}
                 <GridNews articles={articles.current} />
+
                 {/* Recent news: Más artículos */}
                 <ListNews articles={articles.others} />
               </div>

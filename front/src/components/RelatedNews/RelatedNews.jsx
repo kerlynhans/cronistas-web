@@ -10,7 +10,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 const RelatedNews = () => {
   return (
     <div className="related-article">
-      <h4>you may also like</h4>
+      <h4>Te puede interesar</h4>
 
       <div className="article__entry-carousel-three">
         <Swiper

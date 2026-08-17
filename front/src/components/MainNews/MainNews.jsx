@@ -10,12 +10,12 @@ const MainNews = ({ articles }) => {
       <div className="popular__news-header">
         <div className="container">
           <div className="row no-gutters">
-            <div className="col-md-8 ">
+            <div className="col-md-8 p-sm-0">
               <div className="card__post-carousel">
                 <CardArticle2 data={articles[0]} />
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 p-sm-0">
               <div className="popular__news-right">
                 <CardArticle1 data={articles[1]} />
                 <CardArticle1 data={articles[2]} />

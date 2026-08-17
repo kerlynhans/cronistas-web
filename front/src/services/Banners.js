@@ -1,6 +1,6 @@
 /**
- * Fetech all featured banners.
- * @returns Array with data.
+ * Fetch all featured banners.
+ * @returns Object with banners by section.
  */
 export const getHomeBanners = async () => {
   const host = process.env.NEXT_PUBLIC_CMS;
@@ -18,14 +18,14 @@ export const getHomeBanners = async () => {
     };
 
     for (const item of data) {
-      //Include full path url.
+      //Format results to include absolute urls.
       item.image = item.image ? host + item.image : "";
       grouped[item.location].push(item);
     }
 
     return grouped;
   } catch (error) {
-    console.error("Error fetching or processing data:", error);
+    console.error("(getHomeBanners) Error fetching or processing data:", error);
     return null;
   }
 };

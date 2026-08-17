@@ -8,8 +8,17 @@ import LatestPosts from "@/components/LatestPosts/LatestPosts";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import TagsCloud from "@/components/TagsCloud/TagsCloud";
 import AdBanner from "@/components/AdBanner/AdBanner";
+import { getSingleArticle } from "@/services/Articles";
+import { notFound } from "next/navigation";
 
-export default function Article() {
+export default async function ArticlePage({ params }) {
+  const { slug } = await params;
+  const article = await getSingleArticle(`/articulos/${slug}`);
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <main>
       <section className="pb-80">
@@ -19,15 +28,16 @@ export default function Article() {
               <Breadcrumb />
             </div>
             <div className="col-md-8">
-              <ArticleDetail />
-              <TagsArticle />
-              <ProfileAuthor />
+              <ArticleDetail {...article} />
+              <TagsArticle tags={article.tags} />
+
+              {/* <ProfileAuthor /> */}
 
               <div className="row">
                 <div className="col-md-6">
                   <div className="single_navigation-prev">
                     <a href="#">
-                      <span>previous post</span>
+                      <span>Anterior articulo</span>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Rem, similique.
                     </a>
@@ -36,7 +46,7 @@ export default function Article() {
                 <div className="col-md-6">
                   <div className="single_navigation-next text-left text-md-right">
                     <a href="#">
-                      <span>next post</span>
+                      <span>Siguiente artículo</span>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Perferendis, nesciunt.
                     </a>

@@ -15,7 +15,7 @@ const MainBanners = ({ banners }) => {
       {/* Banners carousel */}
       <div className="container">
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-12 p-sm-0">
             <div className="top__news__slider">
               <Swiper
                 modules={[Autoplay]}
