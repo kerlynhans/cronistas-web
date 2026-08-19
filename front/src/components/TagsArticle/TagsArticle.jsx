@@ -10,8 +10,8 @@ const TagsArticle = ({ tags }) => {
         <li className="list-inline-item">
           <i className="fa fa-tags"></i>
         </li>
-        {tags.map((tag) => (
-          <li className="list-inline-item">
+        {tags.map((tag, i) => (
+          <li key={i} className="list-inline-item">
             <Link href={`/temas?q=${tag.name}`}>#{tag.name}</Link>
           </li>
         ))}

@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import Image from "next/image";
-
 import {
   faFacebookF,
   faXTwitter,
@@ -9,37 +7,41 @@ import {
   //faTelegram,
   //faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { formatViews } from "@/utils/formatters";
 
 const ArticleDetail = ({
   title,
-  body,
+  lead,
+  content,
   featuredImage,
   altImage,
   formattedDate,
   author,
+  avatar,
+  views,
 }) => {
   return (
     <div className="wrap__article-detail">
       <div className="wrap__article-detail-title">
         <h1>{title}</h1>
-        <h3>
-          El Líbano en la Feria Internacional del Libro de Bogotá. Musgonia
-          presente en la FILBO 2023. Único municipio de Colombia que cuenta con
-          Stan en la Feria Internacional del Libro de Bogotá
-        </h3>
+        <h3>{lead}</h3>
       </div>
       <hr />
       <div className="wrap__article-detail-info">
         <ul className="list-inline">
-          <li className="list-inline-item">
-            <figure className="image-profile">
-              <img
-                src="/images/placeholder/80x80.jpg"
-                alt=""
-                className="img-fluid"
-              />
-            </figure>
-          </li>
+          {avatar && (
+            <li className="list-inline-item">
+              <figure className="image-profile">
+                <Image
+                  src={avatar}
+                  alt={author}
+                  width={100}
+                  height={100}
+                  className="img-fluid"
+                />
+              </figure>
+            </li>
+          )}
           <li className="list-inline-item">
             <span>Por </span>
             <a href="#">{author},</a>{" "}
@@ -66,10 +68,10 @@ const ArticleDetail = ({
       </div>
       <div className="wrap__article-detail-content">
         <div className="total-views">
-          <div className="total-views-read">
-            15.k
+          <data value={views} className="total-views-read">
+            {formatViews(views)}
             <span>visitas</span>
-          </div>
+          </data>
 
           <ul className="list-inline">
             <span className="share">Compartir: </span>
@@ -96,7 +98,7 @@ const ArticleDetail = ({
         <div className="mt-3">
           <div
             dangerouslySetInnerHTML={{
-              __html: body,
+              __html: content,
             }}
           />
         </div>

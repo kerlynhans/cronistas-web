@@ -2,12 +2,13 @@ import React from "react";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import ArticleDetail from "@/components/ArticleDetail/ArticleDetail";
 import TagsArticle from "@/components/TagsArticle/TagsArticle";
-import ProfileAuthor from "@/components/ProfileAuthor/ProfileAuthor";
+// import ProfileAuthor from "@/components/ProfileAuthor/ProfileAuthor";
 import RelatedNews from "@/components/RelatedNews/RelatedNews";
 import LatestPosts from "@/components/LatestPosts/LatestPosts";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import TagsCloud from "@/components/TagsCloud/TagsCloud";
 import AdBanner from "@/components/AdBanner/AdBanner";
+import ViewsTracker from "@/components/ViewsTracker/ViewsTracker";
 import { getSingleArticle } from "@/services/Articles";
 import { notFound } from "next/navigation";
 
@@ -21,6 +22,9 @@ export default async function ArticlePage({ params }) {
 
   return (
     <main>
+      {/* Invisible tracker to increase views on a second plane */}
+      <ViewsTracker nid={article.nid} />
+
       <section className="pb-80">
         <div className="container">
           <div className="row">

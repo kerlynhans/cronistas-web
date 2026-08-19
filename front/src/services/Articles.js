@@ -35,7 +35,7 @@ export const getHomeArticles = async () => {
       //Format results to include absolute urls.
       item.thumbnail = item.thumbnail ? host + item.thumbnail : "";
       item.image = item.image ? host + item.image : "";
-      item.category = categories[item.category].label;
+      item.category = categories[item.category]?.label;
 
       //Create grouped articles.
       if (item.homepage !== "") {
@@ -86,20 +86,44 @@ export const getSingleArticle = async (path) => {
       const altImage =
         article.field_featured_image?.resourceIdObjMeta?.alt || article.title;
       const formattedDate = moment(article.created).format("MMM DD, YYYY");
-      const author = article.uid?.display_name || article.uid?.name;
+      const author = article.author_name;
+      const avatar = article.author_avatar_url;
 
       //Create Article object.
       return {
+        nid: article.drupal_internal__nid,
         title: article.title,
-        body: article.field_content.processed,
+        lead: article.field_lead,
+        content: article.field_content.processed,
         tags: article.field_tags,
+        views: article.field_views + 1,
         formattedDate,
         featuredImage,
         altImage,
         author,
+        avatar,
       };
     }
   }
 
   return null;
+};
+
+/**
+ * Fetch a custom endpoint to increase article views.
+ * @returns Object with articles by section.
+ */
+export const increaseArticleViews = (nid) => {
+  const host = process.env.NEXT_PUBLIC_CMS;
+  const url = `${host}/api/v1/article-view`;
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ nid: nid }),
+  }).catch((error) => {
+    console.error("Error incrementando vistas:", error);
+  });
 };
