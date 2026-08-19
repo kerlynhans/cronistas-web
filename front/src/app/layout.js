@@ -31,7 +31,7 @@ const poppinsSans = Poppins({
 
 export const metadata = {
   title: {
-    template: "%s :: Cronistas Su Periódico",
+    template: "%s | Cronistas Su Periódico",
     default: "Cronistas Su Periódico",
   },
   description:
