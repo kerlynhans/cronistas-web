@@ -2,6 +2,8 @@
 // Tags component
 // -----------------------------------------------------------------------------
 
+@use "../abstracts" as *;
+
 .blog-tags {
   padding: 15px 0;
   display: inline-block;

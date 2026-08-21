@@ -77,7 +77,7 @@ export const getSingleArticle = async (path) => {
     );
 
     if (article) {
-      console.log("===== ARTICLE ====", article);
+      //console.log("===== ARTICLE ====", article);
 
       const featuredImage =
         article.field_featured_image.field_media_image.image_style_uri[

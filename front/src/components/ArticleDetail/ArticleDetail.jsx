@@ -63,6 +63,7 @@ const ArticleDetail = ({
             height={567}
             style={{ width: "100%", height: "auto" }}
             className="img-fluid"
+            loading="eager"
           />
         </figure>
       </div>

@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 /* ==========================================================================
    WIDGET ARCHIVE ARTICLE
    ========================================================================== */
@@ -57,6 +59,7 @@
 /* ==========================================================================
    WIDGET CATEGORY ARTICLE
    ========================================================================== */
+
 .wrap__masonary {
 }
 
@@ -67,7 +70,8 @@
     border: 0;
     .thumbnail-cover {
       position: relative;
-      ::after {
+
+      &::after {
         content: "";
         position: absolute;
         left: 0;
@@ -79,11 +83,11 @@
         transition: 0.25s ease-out;
         opacity: 0.5;
         pointer-events: none;
+      }
 
-        img {
-          position: relative;
-          object-fit: cover;
-        }
+      img {
+        position: relative;
+        object-fit: cover;
       }
     }
 

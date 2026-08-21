@@ -2,6 +2,8 @@
 // Card Article component
 // -----------------------------------------------------------------------------
 
+@use "../abstracts" as *;
+
 .article__entry-carousel,
 .article__entry-carousel-three {
   position: relative;

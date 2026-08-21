@@ -3,8 +3,7 @@
 // -----------------------------------------------------------------------------
 
 // Vendor
-@import "~bootstrap/scss/functions";
-
+@forward "bootstrap/scss/functions";
 
 // example:
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/abstracts/_functions.scss

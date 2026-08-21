@@ -4,62 +4,58 @@
 // Abstracts
 // - tools and helpers
 
-@import "@fortawesome/fontawesome-free/css/all.min.css";
+@use "@fortawesome/fontawesome-free/css/all.min.css" as *;
 
-@import "abstracts/functions";
-@import "abstracts/variables";
-@import "abstracts/general";
-@import "abstracts/mixins";
-@import "abstracts/media-query";
+@use "abstracts" as *;
 
 // Base
 // - standard styles for commonly elements
-@import "base/base";
-@import "base/helpers";
-@import "base/fonts";
-@import "base/typography";
+@use "base/base" as *;
+@use "base/helpers" as *;
+@use "base/fonts" as *;
+@use "base/typography" as *;
 
 // Components
 // - for small, reusable pieces
-@import "components/loading";
-@import "components/buttons";
-@import "components/form";
-@import "components/breadcrumb";
-@import "components/blockquote";
-@import "components/pagination";
-@import "components/title-head";
-@import "components/errorpage";
-@import "components/widget";
-@import "components/tags";
-@import "components/gallery";
-@import "components/search";
-@import "components/card-article";
-@import "components/card-article-carousel";
-@import "components/list-article";
-@import "components/profile-author";
-@import "components/comments";
-@import "components/masonary-image";
-@import "components/banner";
-@import "components/slider";
-@import "components/slick-carousel";
-@import "components/swiper-carousel";
-@import "components/social-media-animation";
+@use "components/loading" as *;
+@use "components/buttons" as *;
+@use "components/form" as *;
+@use "components/breadcrumb" as *;
+@use "components/blockquote" as *;
+@use "components/pagination" as *;
+@use "components/title-head" as *;
+@use "components/errorpage" as *;
+@use "components/widget" as *;
+@use "components/tags" as *;
+@use "components/gallery" as *;
+@use "components/search" as *;
+@use "components/card-article" as *;
+@use "components/card-article-carousel" as *;
+@use "components/list-article" as *;
+@use "components/profile-author" as *;
+@use "components/comments" as *;
+@use "components/masonary-image" as *;
+@use "components/banner" as *;
+@use "components/slider" as *;
+@use "components/slick-carousel" as *;
+@use "components/swiper-carousel" as *;
+@use "components/social-media-animation" as *;
 
 // Layout
 // - everything that takes part in laying out the site/application
-@import "layout/header";
-@import "layout/navbar";
-@import "layout/menukit";
-@import "layout/footer";
+@use "layout/header" as *;
+@use "layout/navbar" as *;
+@use "layout/menukit" as *;
+@use "layout/footer" as *;
 
 // Pages
 // - page-specific styles
-@import "pages/index";
-@import "pages/home";
-@import "pages/article-detail";
-@import "pages/about-us";
-@import "pages/contact";
+@use "pages/index" as *;
+@use "pages/home" as *;
+@use "pages/article-detail" as *;
+@use "pages/about-us" as *;
+@use "pages/contact" as *;
 
 // Themes
 // - for different aspects
-@import "themes/default";
+@use "themes/default" as *;

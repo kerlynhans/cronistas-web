@@ -1,6 +1,11 @@
 /*-------------------------------------------------------*/
 /* Social media
 /*-------------------------------------------------------*/
+
+@use "sass:color";
+
+@use "../abstracts" as *;
+
 .social__media__animation {
   .menu {
     z-index: 999;
@@ -31,7 +36,7 @@
                 opacity: 1;
                 top: #{$i * 50}px;
                 transform: rotate(0deg);
-                border-top: 1px dashed darken($white, 20%);
+                border-top: 1px dashed color.adjust($white, $lightness: -20%);
                 transition-delay: #{$i * 0.08}s;
                 @include mobile {
                   top: #{$i * 40}px;
@@ -48,7 +53,7 @@
                 left: #{-$i * 51}px;
                 transform: rotate(0deg);
                 transition-delay: #{$i * 0.5}s;
-                border-right: 1px dashed darken($white, 20%);
+                border-right: 1px dashed color.adjust($white, $lightness: -20%);
               }
             }
           }
@@ -61,7 +66,7 @@
                 left: #{$i * 50}px;
                 transform: rotate(0deg);
                 transition-delay: #{$i * 0.08}s;
-                border-left: 1px dashed darken($white, 20%);
+                border-left: 1px dashed color.adjust($white, $lightness: -20%);
               }
             }
           }
@@ -74,7 +79,9 @@
                 top: #{-$i * 51}px;
                 transition-delay: #{$i * 0.08}s;
                 transform: rotateY(0deg);
-                border-bottom: 1px dashed darken($white, 15%);
+                border-bottom: 1px
+                  dashed
+                  color.adjust($white, $lightness: -15%);
               }
             }
           }

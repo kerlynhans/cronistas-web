@@ -2,6 +2,8 @@
 // Footer of the site/application
 // -----------------------------------------------------------------------------
 
+@use "../abstracts" as *;
+
 .bg__footer {
   background-color: #1b1c26;
   &-dark {

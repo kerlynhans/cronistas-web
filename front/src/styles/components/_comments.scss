@@ -2,6 +2,8 @@
 // Comment component
 // -----------------------------------------------------------------------------
 
+@use "../abstracts" as *;
+
 .comments-area {
   .comments-title {
     font-size: 22px;

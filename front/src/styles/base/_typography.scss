@@ -6,6 +6,8 @@
 //
 // example:
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_typography.scss
+@use "../abstracts" as *;
+
 body {
   font: normal 100% / 1.4 $text-font-stack;
 }

@@ -1,6 +1,9 @@
 // -----------------------------------------------------------------------------
 // PROFILE AUTHOR
 // -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
 .wrap__profile {
   border: 1px solid #ddd;
   padding: 20px;
@@ -9,7 +12,6 @@
   margin-bottom: 50px;
 
   &-author {
-  
     display: flex;
     @include mobile {
       display: block;
@@ -36,13 +38,11 @@
       }
     }
     &-detail {
-    
       float: left;
       @include tablet {
         margin-left: 10px;
       }
       &-name {
-      
         text-transform: uppercase;
         color: $gray-600;
         letter-spacing: 1px;
@@ -62,7 +62,6 @@
       .list-inline {
         margin: 0;
         .list-inline-item {
-        
           .btn-social.telegram {
             background: #179cde;
             &:hover {

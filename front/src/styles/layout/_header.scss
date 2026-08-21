@@ -2,6 +2,8 @@
 // Header of the site/application
 // -----------------------------------------------------------------------------
 
+@use "../abstracts" as *;
+
 .header {
   background-color: $header-bg;
 }

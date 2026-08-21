@@ -2,6 +2,8 @@
    Title Head
    ========================================================================== */
 
+@use "../abstracts" as *;
+
 .title-head {
   h3 {
     text-transform: capitalize;

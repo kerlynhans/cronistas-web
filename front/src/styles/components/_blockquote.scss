@@ -6,6 +6,8 @@
 /* Blockquote
 /*-------------------------------------------------------*/
 
+@use "../abstracts" as *;
+
 .block-quote {
   background-color: #fafafa;
   padding: 30px 30px 30px 70px !important;
