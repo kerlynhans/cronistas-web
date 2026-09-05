@@ -1,18 +1,22 @@
 import AdBanner from "@/components/AdBanner/AdBanner";
 import CardArticle13 from "@/components/CardArticle/CardArticle13";
 import CardArticle13a from "@/components/CardArticle/CardArticle13a";
-import CardArticle4b from "@/components/CardArticle/CardArticle4b";
-import Paginator from "@/components/Paginator/Paginator";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
+import LatestPosts from "@/components/LatestPosts/LatestPosts";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 
-export default function Dialogs() {
+export const metadata = {
+  title: "Diálogos sobre discapacidad",
+  description: "Descripción de la sección de diálogos sobre discapacidad",
+};
+
+export default function SectionLayout({ children }) {
   return (
     <main>
       <section className="pb-80">
         <div className="container">
           <div className="text-center">
-            <Breadcrumb />
+            <Breadcrumb items={[{ title: "Diálogos sobre discapacidad" }]} />
           </div>
           <div className="title-head">
             <div className="row justify-content-center">
@@ -32,31 +36,19 @@ export default function Dialogs() {
               <div className="row">
                 <div className="col-lg-6">
                   <CardArticle13a />
-                  <CardArticle13a />
                 </div>
                 <div className="col-lg-6">
-                  <CardArticle13a />
                   <CardArticle13a />
                 </div>
               </div>
 
-              <aside className="wrapper__list__article">
-                <div className="wrapp__list__article-responsive">
-                  <CardArticle4b />
-                  <CardArticle4b />
-                  <CardArticle4b />
-                  <CardArticle4b />
-                </div>
-                <div className="mx-auto">
-                  <Paginator />
-                </div>
-              </aside>
+              {/* Render specific content */ children}
             </div>
 
             <div className="col-lg-4">
-              <div className="sticky-top">
-                <CardArticle13a />
-                <CardArticle13a />
+              <div className="sticky-top mt-3">
+                {/* Must read news: Recomendados */}
+                <LatestPosts articles={[]} />
 
                 <div className="mt-3">
                   <SocialMedia />

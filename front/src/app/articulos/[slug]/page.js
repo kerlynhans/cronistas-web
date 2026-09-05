@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }) {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <Breadcrumb />
+              <Breadcrumb items={[{ title: article.title }]} />
             </div>
             <div className="col-md-8">
               <ArticleDetail {...article} />
