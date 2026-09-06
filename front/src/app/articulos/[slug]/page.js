@@ -10,56 +10,16 @@ import TagsCloud from "@/components/TagsCloud/TagsCloud";
 import AdBanner from "@/components/AdBanner/AdBanner";
 import ViewsTracker from "@/components/ViewsTracker/ViewsTracker";
 import { getSingleArticle } from "@/services/Articles";
+import { getArticleMetadata } from "@/services/Metadata";
 import { notFound } from "next/navigation";
 
 /**
  * Function generateMetadata to enable SEO and social networks atributes.
- * @param {*} param0
- * @returns
+ * @returns Metadata structure needed by Next.js
  */
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const article = await getSingleArticle(`/articulos/${slug}`);
-  const articleUrl = process.env.NEXT_PUBLIC_CMS + `/articulos/${slug}`;
-
-  if (!article) {
-    return {
-      title: "Artículo no encontrado",
-      description: "El artículo solicitado no está disponible.",
-    };
-  }
-
-  return {
-    title: article.title,
-    description: article.description,
-
-    // Open Graph (WhatsApp, Facebook, LinkedIn)
-    openGraph: {
-      title: article.title,
-      description: article.description,
-      url: articleUrl,
-      siteName: "Cronistas Su Periódico",
-      locale: "es_CO",
-      type: "article",
-      publishedTime: article.rawDate,
-      images: [
-        {
-          url: article.featuredImage,
-          width: 1008,
-          height: 567,
-          alt: article.title,
-        },
-      ],
-    },
-
-    // Twitter / X
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.description,
-      images: [article.featuredImage],
-    },
-  };
+  return getArticleMetadata(`/articulos/${slug}`);
 }
 
 /**

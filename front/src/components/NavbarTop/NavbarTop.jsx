@@ -7,6 +7,7 @@ import {
 
 import styles from "./NavbarTop.module.scss";
 import Link from "next/link";
+import HeaderDate from "../HeaderDate/HeaderDate";
 
 const NavbarTop = () => {
   return (
@@ -16,7 +17,7 @@ const NavbarTop = () => {
           <div className="col-sm-12 col-md-5">
             <div className="topbar-left">
               <div className={`topbar-text ${styles.text}`}>
-                Lunes, Marzo 22, 2020
+                <HeaderDate />
               </div>
             </div>
           </div>

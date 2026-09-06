@@ -4,13 +4,30 @@ import CardArticle13a from "@/components/CardArticle/CardArticle13a";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import LatestPosts from "@/components/LatestPosts/LatestPosts";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import { getSinglePage } from "@/services/Pages";
+import { getPageMetadata } from "@/services/Metadata";
+import { notFound } from "next/navigation";
 
-export const metadata = {
-  title: "Diálogos sobre discapacidad",
-  description: "Descripción de la sección de diálogos sobre discapacidad",
-};
+/**
+ * Function generateMetadata to enable SEO and social networks atributes.
+ * @returns Metadata structure needed by Next.js
+ */
+export async function generateMetadata() {
+  return getPageMetadata(`/dialogos-sobre-discapacidad`);
+}
 
-export default function SectionLayout({ children }) {
+/**
+ * Renders the page gathering information from CMS.
+ * @param {*} param0
+ * @returns
+ */
+export default async function SectionLayout({ children }) {
+  const page = await getSinglePage(`/dialogos-sobre-discapacidad`);
+
+  if (!page) {
+    notFound();
+  }
+
   return (
     <main>
       <section className="pb-80">
@@ -21,11 +38,8 @@ export default function SectionLayout({ children }) {
           <div className="title-head">
             <div className="row justify-content-center">
               <div className="col-md-6 col-sm-12 text-center">
-                <h1>Diálogos sobre discapacidad</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloribus nemo blanditiis optio officiis. Nam, harum.
-                </p>
+                <h1>{page.title}</h1>
+                <p>{page.lead}</p>
               </div>
             </div>
           </div>

@@ -29,15 +29,6 @@ const poppinsSans = Poppins({
   weight: ["500", "600", "700"],
 });
 
-export const metadata = {
-  title: {
-    template: "%s | Cronistas Su Periódico",
-    default: "Cronistas Su Periódico",
-  },
-  description:
-    "Estamos siempre a su disposición ... para trabajar de la mano con el departamento del Tolima!!",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="es" data-scroll-behavior="smooth">
